@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
 # Copyright 2010 United States Government as represented by the
@@ -16,17 +15,22 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
-
 """
-  Twistd daemon for the nova volume nodes.
+Base class for managers of different parts of the system
 """
 
-from nova import twistd
-from nova.volume import service
+from nova import utils
+from nova import flags
 
 
-if __name__ == '__main__':
-    twistd.serve(__file__)
+FLAGS = flags.FLAGS
+flags.DEFINE_string('db_driver', 'nova.db.api',
+                    'driver to use for volume creation')
 
-if __name__ == '__builtin__':
-    application = service.VolumeService.create()  # pylint: disable-msg=C0103
+
+class Manager(object):
+    """DB driver is injected in the init method"""
+    def __init__(self, db_driver=None):
+        if not db_driver:
+            db_driver = FLAGS.db_driver
+        self.db = utils.import_object(db_driver)  # pylint: disable-msg=C0103
