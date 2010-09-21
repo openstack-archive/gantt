@@ -1,8 +1,6 @@
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
-# Copyright 2010 United States Government as represented by the
-# Administrator of the National Aeronautics and Space Administration.
-# All Rights Reserved.
+# Copyright (c) 2010 Openstack, LLC.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -16,11 +14,12 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from nova import flags
+"""
+:mod:`nova.scheduler` -- Scheduler Nodes
+=====================================================
 
-FLAGS = flags.FLAGS
-
-FLAGS.connection_type = 'libvirt'
-FLAGS.fake_rabbit = False
-FLAGS.fake_network = False
-FLAGS.verbose = False
+.. automodule:: nova.scheduler
+   :platform: Unix
+   :synopsis: Module that picks a compute node to run a VM instance.
+.. moduleauthor:: Chris Behrens <cbehrens@codestud.com>
+"""
