@@ -1,6 +1,6 @@
-#!/usr/bin/env python
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
+# Copyright (c) 2010 Openstack, LLC.
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
 # All Rights Reserved.
@@ -18,26 +18,21 @@
 #    under the License.
 
 """
-  Twistd daemon for the nova compute nodes.
+Chance (Random) Scheduler implementation
 """
 
-import os
-import sys
+import random
 
-# If ../nova/__init__.py exists, add ../ to Python search path, so that
-# it will override what happens to be installed in /usr/(local/)lib/python...
-possible_topdir = os.path.normpath(os.path.join(os.path.abspath(sys.argv[0]),
-                                   os.pardir,
-                                   os.pardir))
-if os.path.exists(os.path.join(possible_topdir, 'nova', '__init__.py')):
-    sys.path.insert(0, possible_topdir)
-
-from nova import service
-from nova import twistd
+from nova.scheduler import driver
 
 
-if __name__ == '__main__':
-    twistd.serve(__file__)
+class ChanceScheduler(driver.Scheduler):
+    """Implements Scheduler as a random node selector."""
 
-if __name__ == '__builtin__':
-    application = service.Service.create()  # pylint: disable=C0103
+    def schedule(self, context, topic, *_args, **_kwargs):
+        """Picks a host that is up at random."""
+
+        hosts = self.hosts_up(context, topic)
+        if not hosts:
+            raise driver.NoValidHost("No hosts found")
+        return hosts[int(random.random() * len(hosts))]
