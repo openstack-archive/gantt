@@ -16,27 +16,38 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import logging
-import unittest
+import StringIO
+import sys
 
+from nova import twistd
+from nova import exception
 from nova import flags
 from nova import test
-from nova import validate
 
 
-class ValidationTestCase(test.TrialTestCase):
+FLAGS = flags.FLAGS
+
+
+class TwistdTestCase(test.TrialTestCase):
     def setUp(self):
-        super(ValidationTestCase, self).setUp()
+        super(TwistdTestCase, self).setUp()
+        self.Options = twistd.WrapTwistedOptions(twistd.TwistdServerOptions)
+        sys.stdout = StringIO.StringIO()
 
     def tearDown(self):
-        super(ValidationTestCase, self).tearDown()
+        super(TwistdTestCase, self).tearDown()
+        sys.stdout = sys.__stdout__
 
-    def test_type_validation(self):
-        self.assertTrue(type_case("foo", 5, 1))
-        self.assertRaises(TypeError, type_case, "bar", "5", 1)
-        self.assertRaises(TypeError, type_case, None, 5, 1)
+    def test_basic(self):
+        options = self.Options()
+        argv = options.parseOptions()
 
+    def test_logfile(self):
+        options = self.Options()
+        argv = options.parseOptions(['--logfile=foo'])
+        self.assertEqual(FLAGS.logfile, 'foo')
 
-@validate.typetest(instanceid=str, size=int, number_of_instances=int)
-def type_case(instanceid, size, number_of_instances):
-    return True
+    def test_help(self):
+        options = self.Options()
+        self.assertRaises(SystemExit, options.parseOptions, ['--help'])
+        self.assert_('pidfile' in sys.stdout.getvalue())
