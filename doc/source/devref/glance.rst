@@ -15,29 +15,14 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-Nova Fakes
-==========
+Glance Integration - The Future of File Storage
+===============================================
 
-The :mod:`virt.fake` Module
---------------------------
+The :mod:`nova.image.service` Module
+------------------------------------
 
-.. automodule:: nova.virt.fake
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-The :mod:`fakeldap` Module
---------------------------
-
-.. automodule:: nova.auth.fakeldap
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-The :mod:`fakerabbit` Module
-----------------------------
-
-.. automodule:: nova.fakerabbit
+.. automodule:: nova.image.service
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:

@@ -15,60 +15,49 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-Compute Documentation
-=====================
+The Database Layer
+==================
 
-This page contains the Compute Package documentation.
+The :mod:`nova.db.api` Module
+-----------------------------
 
-
-The :mod:`disk` Module
-----------------------
-
-.. automodule:: nova.compute.disk
+.. automodule:: nova.db.api
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`exception` Module
----------------------------
 
-.. automodule:: nova.compute.exception
+The Sqlalchemy Driver
+---------------------
+
+The :mod:`nova.db.sqlalchemy.api` Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: nova.db.sqlalchemy.api
+    :noindex:
+
+The :mod:`nova.db.sqlalchemy.models` Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: nova.db.sqlalchemy.models
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`model` Module
--------------------------
+The :mod:`nova.db.sqlalchemy.session` Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. automodule:: nova.compute.model
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-The :mod:`network` Module
--------------------------
-
-.. automodule:: nova.compute.network
+.. automodule:: nova.db.sqlalchemy.session
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`node` Module
-----------------------
 
-.. automodule:: nova.compute.node
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-RELATED TESTS
----------------
+Tests
+-----
 
-The :mod:`node_unittest` Module
--------------------------------
-
-.. automodule:: nova.tests.node_unittest
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+Tests are lacking for the db api layer and for the sqlalchemy driver.
+Failures in the drivers would be dectected in other test cases, though.

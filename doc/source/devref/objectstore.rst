@@ -15,77 +15,57 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-NOVA Libraries
-===============
+Objectstore - File Storage Service
+==================================
 
-The :mod:`crypto` Module
-------------------------
+The :mod:`nova.objectstore.handler` Module
+------------------------------------------
 
-.. automodule:: nova.crypto
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-The :mod:`adminclient` Module
------------------------------
-
-.. automodule:: nova.adminclient
+.. automodule:: nova.objectstore.handler
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`datastore` Module
----------------------------
 
-.. automodule:: nova.datastore
+The :mod:`nova.objectstore.bucket` Module
+-----------------------------------------
+
+.. automodule:: nova.objectstore.bucket
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`exception` Module
----------------------------
 
-.. automodule:: nova.exception
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-The :mod:`flags` Module
----------------------------
+The :mod:`nova.objectstore.stored` Module
+-----------------------------------------
 
-.. automodule:: nova.flags
+.. automodule:: nova.objectstore.stored
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`rpc` Module
----------------------------
 
-.. automodule:: nova.rpc
+The :mod:`nova.objecstore.image` Module
+----------------------------------------
+
+.. automodule:: nova.objectstore.image
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
-    
-The :mod:`server` Module
----------------------------
 
-.. automodule:: nova.server
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-The :mod:`test` Module
----------------------------
 
-.. automodule:: nova.test
-    :members:
-    :undoc-members:
-    :show-inheritance:  
-      
-The :mod:`utils` Module
----------------------------
+Tests
+-----
 
-.. automodule:: nova.utils
+The :mod:`objectstore_unittest` Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automodule:: nova.tests.objectstore_unittest
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:

@@ -1,6 +1,6 @@
 ..
       Copyright 2010 United States Government as represented by the
-      Administrator of the National Aeronautics and Space Administration. 
+      Administrator of the National Aeronautics and Space Administration.
       All Rights Reserved.
 
       Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,17 +15,7 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-Storage in the Nova Cloud
-=========================
+Managing Images
+===============
 
-There are three primary classes of storage in a nova cloud environment:
-
-* Ephemeral Storage (local disk within an instance)
-* Volume Storage (network-attached FS)
-* Object Storage (redundant KVS with locality and MR)
-
-.. toctree::
-   :maxdepth: 2
-   
-   volume
-   objectstore      
+.. todo:: Put info on managing images  here!

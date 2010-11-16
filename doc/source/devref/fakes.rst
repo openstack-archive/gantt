@@ -15,77 +15,71 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-Endpoint Documentation
-======================
+Fake Drivers
+============
 
-This page contains the Endpoint Package documentation.
+.. todo:: document general info about fakes
 
-The :mod:`admin` Module
------------------------
+When the real thing isn't available and you have some development to do these
+fake implementations of various drivers let you get on with your day.
 
-.. automodule:: nova.endpoint.admin
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
-The :mod:`api` Module
----------------------
-
-.. automodule:: nova.endpoint.api
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-The :mod:`cloud` Module
------------------------
-
-.. automodule:: nova.endpoint.cloud
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-The :mod:`images` Module
-------------------------
-
-.. automodule:: nova.endpoint.images
-    :members:
-    :undoc-members:
-    :show-inheritance:
-    
-    
-RELATED TESTS
---------------
-
-The :mod:`api_unittest` Module
-------------------------------
-
-.. automodule:: nova.tests.api_unittest
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-The :mod:`api_integration` Module
----------------------------------
-
-.. automodule:: nova.tests.api_integration
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-The :mod:`cloud_unittest` Module
+The :mod:`nova.virt.fake` Module
 --------------------------------
 
-.. automodule:: nova.tests.cloud_unittest
+.. automodule:: nova.virt.fake
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
-The :mod:`network_unittest` Module
-----------------------------------
 
-.. automodule:: nova.tests.network_unittest
+The :mod:`nova.auth.fakeldap` Module
+------------------------------------
+
+.. automodule:: nova.auth.fakeldap
+    :noindex:
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+
+The :mod:`nova.fakerabbit` Module
+---------------------------------
+
+.. automodule:: nova.fakerabbit
+    :noindex:
     :members:
     :undoc-members:
     :show-inheritance:
 
+
+The :class:`nova.volume.driver.FakeAOEDriver` Class
+---------------------------------------------------
+
+.. autoclass:: nova.volume.driver.FakeAOEDriver
+    :noindex:
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+The :class:`nova.tests.service_unittest.FakeManager` Class
+----------------------------------------------------------
+
+.. autoclass:: nova.tests.service_unittest.FakeManager
+    :noindex:
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+The :mod:`nova.tests.api.openstack.fakes` Module
+------------------------------------------------
+
+.. automodule:: nova.tests.api.openstack.fakes
+    :noindex:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 

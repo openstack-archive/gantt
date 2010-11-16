@@ -15,20 +15,9 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-Nova Documentation
-==================
+Flags and Flagfiles
+===================
 
-This page contains the Nova Modules documentation.
-
-Modules:
---------
-
-.. toctree::
-   :maxdepth: 4
-
-   auth
-   compute
-   endpoint
-   fakes
-   nova
-   volume
+* python-gflags
+* flagfiles
+* list of flags by component (see concepts list)

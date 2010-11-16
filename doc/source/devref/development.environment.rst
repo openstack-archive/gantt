@@ -15,15 +15,7 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-nova Packages & Dependencies
-============================
+Setting up a development environment
+====================================
 
-Nova is being built on Ubuntu Lucid.
-
-The following packages are required:
-
-  apt-get install python-ipy, python-libvirt, python-boto, python-pycurl, python-twisted, python-daemon, python-redis, python-carrot, python-lockfile
-
-In addition you need to install python:
-
- * python-gflags - http://code.google.com/p/python-gflags/
+.. todo:: write this

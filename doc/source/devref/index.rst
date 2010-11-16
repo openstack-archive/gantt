@@ -1,6 +1,6 @@
 ..
       Copyright 2010 United States Government as represented by the
-      Administrator of the National Aeronautics and Space Administration. 
+      Administrator of the National Aeronautics and Space Administration.
       All Rights Reserved.
 
       Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,17 +15,48 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-Nova Binaries
+Developer Guide
 ===============
 
-* nova-api
-* nova-compute
-* nova-manage
-* nova-objectstore
-* nova-volume
+In this section you will find information on Nova's lower level programming APIs.
 
-The configuration of these binaries relies on "flagfiles" using the google 
-gflags package. If present, the nova.conf file will be used as the flagfile 
-- otherwise, it must be specified on the command line::
-   
-   $ python node_worker.py --flagfile flagfile
+
+Programming HowTos and Tutorials
+--------------------------------
+
+.. todo:: Add some programming howtos and tuts
+
+API Reference
+-------------
+.. toctree::
+   :maxdepth: 3
+
+   ../api/autoindex
+
+Module Reference
+----------------
+.. toctree::
+   :maxdepth: 3
+
+   services
+   database
+   volume
+   compute
+   network
+   auth
+   api
+   scheduler
+   fakes
+   nova
+   cloudpipe
+   objectstore
+   glance
+
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
