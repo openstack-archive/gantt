@@ -1,8 +1,6 @@
-#!/bin/bash
+# vim: tabstop=4 shiftwidth=4 softtabstop=4
 
-# Copyright 2010 United States Government as represented by the
-# Administrator of the National Aeronautics and Space Administration.
-# All Rights Reserved.
+#    Copyright (c) 2010 Citrix Systems, Inc.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -16,14 +14,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-if [ -f "cacert.pem" ];
-then
-    echo "Not installing, it's already done."
-else
-    cp openssl.cnf.tmpl openssl.cnf
-    sed -i -e s/%USERNAME%/ROOT/g openssl.cnf
-    openssl req -new -x509 -extensions v3_ca -keyout private/cakey.pem -out cacert.pem -days 365 -config ./openssl.cnf -batch -nodes
-    touch index.txt
-    echo "10" > serial
-    openssl ca -gencrl -config ./openssl.cnf -out crl.pem
-fi
+"""
+:mod:`xenapi` -- Stubs for XenAPI
+=================================
+"""
