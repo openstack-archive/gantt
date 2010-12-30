@@ -22,8 +22,6 @@ Tests For Compute
 import datetime
 import logging
 
-from twisted.internet import defer
-
 from nova import context
 from nova import db
 from nova import exception
@@ -33,15 +31,17 @@ from nova import utils
 from nova.auth import manager
 from nova.compute import api as compute_api
 
+
 FLAGS = flags.FLAGS
 
 
-class ComputeTestCase(test.TrialTestCase):
+class ComputeTestCase(test.TestCase):
     """Test case for compute"""
     def setUp(self):
         logging.getLogger().setLevel(logging.DEBUG)
         super(ComputeTestCase, self).setUp()
         self.flags(connection_type='fake',
+                   stub_network=True,
                    network_manager='nova.network.manager.FlatManager')
         self.compute = utils.import_object(FLAGS.compute_manager)
         self.compute_api = compute_api.ComputeAPI()
@@ -72,52 +72,44 @@ class ComputeTestCase(test.TrialTestCase):
         """Verify that an instance cannot be created without a display_name."""
         cases = [dict(), dict(display_name=None)]
         for instance in cases:
-            ref = self.compute_api.create_instance(self.context, None,
-                                                   **instance)
+            ref = self.compute_api.create_instances(self.context,
+                FLAGS.default_instance_type, None, **instance)
             try:
-                self.assertNotEqual(ref.display_name, None)
+                self.assertNotEqual(ref[0].display_name, None)
             finally:
-                db.instance_destroy(self.context, ref['id'])
+                db.instance_destroy(self.context, ref[0]['id'])
 
     def test_create_instance_associates_security_groups(self):
-        """Make sure create_instance associates security groups"""
-        inst = {}
-        inst['user_id'] = self.user.id
-        inst['project_id'] = self.project.id
+        """Make sure create_instances associates security groups"""
         values = {'name': 'default',
                   'description': 'default',
                   'user_id': self.user.id,
                   'project_id': self.project.id}
         group = db.security_group_create(self.context, values)
-        ref = self.compute_api.create_instance(self.context,
-                                               security_groups=[group['id']],
-                                               **inst)
-        # reload to get groups
-        instance_ref = db.instance_get(self.context, ref['id'])
+        ref = self.compute_api.create_instances(self.context,
+            FLAGS.default_instance_type, None, security_group=['default'])
         try:
-            self.assertEqual(len(instance_ref['security_groups']), 1)
+            self.assertEqual(len(ref[0]['security_groups']), 1)
         finally:
             db.security_group_destroy(self.context, group['id'])
-            db.instance_destroy(self.context, instance_ref['id'])
+            db.instance_destroy(self.context, ref[0]['id'])
 
-    @defer.inlineCallbacks
     def test_run_terminate(self):
         """Make sure it is possible to  run and terminate instance"""
         instance_id = self._create_instance()
 
-        yield self.compute.run_instance(self.context, instance_id)
+        self.compute.run_instance(self.context, instance_id)
 
         instances = db.instance_get_all(context.get_admin_context())
         logging.info("Running instances: %s", instances)
         self.assertEqual(len(instances), 1)
 
-        yield self.compute.terminate_instance(self.context, instance_id)
+        self.compute.terminate_instance(self.context, instance_id)
 
         instances = db.instance_get_all(context.get_admin_context())
         logging.info("After terminating instances: %s", instances)
         self.assertEqual(len(instances), 0)
 
-    @defer.inlineCallbacks
     def test_run_terminate_timestamps(self):
         """Make sure timestamps are set for launched and destroyed"""
         instance_id = self._create_instance()
@@ -125,42 +117,48 @@ class ComputeTestCase(test.TrialTestCase):
         self.assertEqual(instance_ref['launched_at'], None)
         self.assertEqual(instance_ref['deleted_at'], None)
         launch = datetime.datetime.utcnow()
-        yield self.compute.run_instance(self.context, instance_id)
+        self.compute.run_instance(self.context, instance_id)
         instance_ref = db.instance_get(self.context, instance_id)
         self.assert_(instance_ref['launched_at'] > launch)
         self.assertEqual(instance_ref['deleted_at'], None)
         terminate = datetime.datetime.utcnow()
-        yield self.compute.terminate_instance(self.context, instance_id)
+        self.compute.terminate_instance(self.context, instance_id)
         self.context = self.context.elevated(True)
         instance_ref = db.instance_get(self.context, instance_id)
         self.assert_(instance_ref['launched_at'] < terminate)
         self.assert_(instance_ref['deleted_at'] > terminate)
 
-    @defer.inlineCallbacks
+    def test_pause(self):
+        """Ensure instance can be paused"""
+        instance_id = self._create_instance()
+        self.compute.run_instance(self.context, instance_id)
+        self.compute.pause_instance(self.context, instance_id)
+        self.compute.unpause_instance(self.context, instance_id)
+        self.compute.terminate_instance(self.context, instance_id)
+
     def test_reboot(self):
         """Ensure instance can be rebooted"""
         instance_id = self._create_instance()
-        yield self.compute.run_instance(self.context, instance_id)
-        yield self.compute.reboot_instance(self.context, instance_id)
-        yield self.compute.terminate_instance(self.context, instance_id)
+        self.compute.run_instance(self.context, instance_id)
+        self.compute.reboot_instance(self.context, instance_id)
+        self.compute.terminate_instance(self.context, instance_id)
 
-    @defer.inlineCallbacks
     def test_console_output(self):
         """Make sure we can get console output from instance"""
         instance_id = self._create_instance()
-        yield self.compute.run_instance(self.context, instance_id)
+        self.compute.run_instance(self.context, instance_id)
 
-        console = yield self.compute.get_console_output(self.context,
+        console = self.compute.get_console_output(self.context,
                                                         instance_id)
         self.assert_(console)
-        yield self.compute.terminate_instance(self.context, instance_id)
+        self.compute.terminate_instance(self.context, instance_id)
 
-    @defer.inlineCallbacks
     def test_run_instance_existing(self):
         """Ensure failure when running an instance that already exists"""
         instance_id = self._create_instance()
-        yield self.compute.run_instance(self.context, instance_id)
-        self.assertFailure(self.compute.run_instance(self.context,
-                                                     instance_id),
-                           exception.Error)
-        yield self.compute.terminate_instance(self.context, instance_id)
+        self.compute.run_instance(self.context, instance_id)
+        self.assertRaises(exception.Error,
+                          self.compute.run_instance,
+                          self.context,
+                          instance_id)
+        self.compute.terminate_instance(self.context, instance_id)
