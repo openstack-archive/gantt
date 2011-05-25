@@ -13,7 +13,22 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import json
+
+from nova import flags
+from nova import log as logging
+
+
+FLAGS = flags.FLAGS
+
 
 def notify(message):
-    """Notifies the recipient of the desired event given the model"""
-    pass
+    """Notifies the recipient of the desired event given the model.
+    Log notifications using nova's default logging system"""
+
+    priority = message.get('priority',
+                           FLAGS.default_notification_level)
+    priority = priority.lower()
+    logger = logging.getLogger(
+            'nova.notification.%s' % message['event_type'])
+    getattr(logger, priority)(json.dumps(message))
