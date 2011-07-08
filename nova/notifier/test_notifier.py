@@ -1,6 +1,4 @@
-# vim: tabstop=4 shiftwidth=4 softtabstop=4
-
-# Copyright 2011 Openstack LLC.
+# Copyright 2011 OpenStack LLC.
 # All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,5 +13,16 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-# NOTE(vish): this forces the fixtures from tests/__init.py:setup() to work
-from nova.tests import *
+import json
+
+from nova import flags
+from nova import log as logging
+
+FLAGS = flags.FLAGS
+
+NOTIFICATIONS = []
+
+
+def notify(message):
+    """Test notifier, stores notifications in memory for unittests."""
+    NOTIFICATIONS.append(message)
