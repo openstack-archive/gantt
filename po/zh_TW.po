@@ -1,4 +1,4 @@
-# Russian translation for nova
+# Chinese (Traditional) translation for nova
 # Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the nova package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: nova\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-02-21 10:03-0500\n"
-"PO-Revision-Date: 2011-07-09 07:20+0000\n"
-"Last-Translator: ilya kislicyn <Unknown>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"PO-Revision-Date: 2011-03-25 07:14+0000\n"
+"Last-Translator: Hugo Kou <Unknown>\n"
+"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +21,11 @@ msgstr ""
 #: ../nova/scheduler/simple.py:75 ../nova/scheduler/simple.py:110
 #: ../nova/scheduler/simple.py:122
 msgid "No hosts found"
-msgstr "Узлы не найдены"
+msgstr "找不到主機"
 
 #: ../nova/exception.py:33
 msgid "Unexpected error while running command."
-msgstr "Неожиданная ошибка при выполнении команды."
+msgstr "非預期的執行錯誤"
 
 #: ../nova/exception.py:36
 #, python-format
@@ -44,7 +44,7 @@ msgstr ""
 #. exc_type, exc_value, exc_traceback = sys.exc_info()
 #: ../nova/exception.py:120
 msgid "Uncaught exception"
-msgstr "Необработанное исключение"
+msgstr ""
 
 #: ../nova/volume/api.py:45
 #, python-format
@@ -54,27 +54,27 @@ msgstr ""
 #: ../nova/volume/api.py:47
 #, python-format
 msgid "Volume quota exceeded. You cannot create a volume of size %sG"
-msgstr "Квота тома превышена. Вы не можете создать том размером %sG"
+msgstr "Volume 超過限制。無法創建 volume 大小 %sG"
 
 #: ../nova/volume/api.py:71 ../nova/volume/api.py:96
 msgid "Volume status must be available"
-msgstr ""
+msgstr "Volume 狀態需要可被使用"
 
 #: ../nova/volume/api.py:98
 msgid "Volume is already attached"
-msgstr "Том уже смотирован"
+msgstr "Volume 已掛載"
 
 #: ../nova/volume/api.py:104
 msgid "Volume is already detached"
-msgstr "Том уже отмонтирован"
+msgstr "Volume 已經卸載"
 
 #: ../nova/api/openstack/servers.py:72
 msgid "Failed to read private ip"
-msgstr "Ошибка чтения приватного IP адреса"
+msgstr "讀取private ip 失敗"
 
 #: ../nova/api/openstack/servers.py:79
 msgid "Failed to read public ip(s)"
-msgstr "Ошибка чтения публичных IP адресов"
+msgstr "讀取public ip 失敗"
 
 #: ../nova/api/openstack/servers.py:152
 #, python-format
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../nova/api/openstack/servers.py:168
 msgid "No keypairs defined"
-msgstr "Не определены ключевые пары"
+msgstr "沒有定義的金鑰(keypair)配對"
 
 #: ../nova/api/openstack/servers.py:238
 #, python-format
@@ -130,13 +130,13 @@ msgstr ""
 #: ../nova/api/ec2/__init__.py:317
 #, python-format
 msgid "Instance %s not found"
-msgstr ""
+msgstr "找不到虛擬機器 %s"
 
 #. NOTE: No Resource Pool concept so far
 #: ../nova/virt/xenapi/volumeops.py:51
 #, python-format
 msgid "Attach_volume: %(instance_name)s, %(device_path)s, %(mountpoint)s"
-msgstr ""
+msgstr "掛載_Volume: %(instance_name)s, %(device_path)s, %(mountpoint)s"
 
 #: ../nova/virt/xenapi/volumeops.py:69
 #, python-format
@@ -151,38 +151,38 @@ msgstr ""
 #: ../nova/virt/xenapi/volumeops.py:91
 #, python-format
 msgid "Unable to attach volume to instance %s"
-msgstr ""
+msgstr "無法掛載Volume 到虛擬機器 %s"
 
 #: ../nova/virt/xenapi/volumeops.py:93
 #, python-format
 msgid "Mountpoint %(mountpoint)s attached to instance %(instance_name)s"
-msgstr ""
+msgstr "掛載點 %(mountpoint)s 掛載到虛擬機器 %(instance_name)s"
 
 #. Detach VBD from VM
 #: ../nova/virt/xenapi/volumeops.py:104
 #, python-format
 msgid "Detach_volume: %(instance_name)s, %(mountpoint)s"
-msgstr ""
+msgstr "卸載_Volume: %(instance_name)s, %(mountpoint)s"
 
 #: ../nova/virt/xenapi/volumeops.py:112
 #, python-format
 msgid "Unable to locate volume %s"
-msgstr ""
+msgstr "找不到Volume %s"
 
 #: ../nova/virt/xenapi/volumeops.py:120
 #, python-format
 msgid "Unable to detach volume %s"
-msgstr ""
+msgstr "無法卸載 Volume %s"
 
 #: ../nova/virt/xenapi/volumeops.py:127
 #, python-format
 msgid "Mountpoint %(mountpoint)s detached from instance %(instance_name)s"
-msgstr ""
+msgstr "掛載點 %(mountpoint)s 從虛擬機器 %(instance_name)s 卸載"
 
 #: ../nova/compute/instance_types.py:41
 #, python-format
 msgid "Unknown instance type: %s"
-msgstr ""
+msgstr "未知的虛擬機器規格:  %s"
 
 #: ../nova/crypto.py:46
 msgid "Filename of root CA"
@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../nova/crypto.py:49
 msgid "Filename of private key"
-msgstr "Имя файла секретного ключа"
+msgstr "Private key 私鑰檔案名稱"
 
 #: ../nova/crypto.py:51
 msgid "Filename of root Certificate Revokation List"
@@ -198,7 +198,7 @@ msgstr ""
 
 #: ../nova/crypto.py:53
 msgid "Where we keep our keys"
-msgstr "Путь к ключам"
+msgstr ""
 
 #: ../nova/crypto.py:55
 msgid "Where we keep our root CA"
@@ -595,12 +595,12 @@ msgstr ""
 #: ../nova/utils.py:58
 #, python-format
 msgid "Inner Exception: %s"
-msgstr "Вложенное исключение: %s"
+msgstr ""
 
 #: ../nova/utils.py:59
 #, python-format
 msgid "Class %s cannot be found"
-msgstr "Класс %s не найден"
+msgstr ""
 
 #: ../nova/utils.py:118
 #, python-format
@@ -615,7 +615,7 @@ msgstr ""
 #: ../nova/utils.py:143 ../nova/utils.py:183
 #, python-format
 msgid "Result was %s"
-msgstr "Результат %s"
+msgstr ""
 
 #: ../nova/utils.py:159
 #, python-format
@@ -630,7 +630,7 @@ msgstr ""
 #: ../nova/utils.py:222
 #, python-format
 msgid "Running %s"
-msgstr "Выполняется %s"
+msgstr ""
 
 #: ../nova/utils.py:262
 #, python-format
@@ -665,12 +665,12 @@ msgstr ""
 #: ../nova/fakerabbit.py:84
 #, python-format
 msgid "Declaring queue %s"
-msgstr "Объявление очереди %s"
+msgstr ""
 
 #: ../nova/fakerabbit.py:90
 #, python-format
 msgid "Declaring exchange %s"
-msgstr "Объявление точки обмена %s"
+msgstr ""
 
 #: ../nova/fakerabbit.py:96
 #, python-format
@@ -952,7 +952,7 @@ msgstr ""
 #: ../nova/tests/test_rpc.py:120 ../nova/tests/test_rpc.py:126
 #, python-format
 msgid "Received %s"
-msgstr "Получено %s"
+msgstr ""
 
 #: ../nova/db/sqlalchemy/api.py:44
 msgid "Use of empty request context is deprecated"
@@ -1126,7 +1126,7 @@ msgstr ""
 #: ../nova/virt/libvirt_conn.py:313
 #, python-format
 msgid "No disk at %s"
-msgstr "Нет диска в %s"
+msgstr ""
 
 #: ../nova/virt/libvirt_conn.py:320
 msgid "Instance snapshotting is not supported for libvirtat this time"
@@ -1236,7 +1236,7 @@ msgstr ""
 #: ../nova/api/ec2/metadatarequesthandler.py:76
 #, python-format
 msgid "Failed to get metadata for ip: %s"
-msgstr "Ошибка получения метаданных для ip: %s"
+msgstr ""
 
 #: ../nova/auth/fakeldap.py:33
 msgid "Attempted to instantiate singleton"
@@ -1292,12 +1292,12 @@ msgstr ""
 #: ../nova/api/ec2/cloud.py:303
 #, python-format
 msgid "Create key pair %s"
-msgstr "Создание пары ключей %s"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:311
 #, python-format
 msgid "Delete key pair %s"
-msgstr "Удаление пары ключей %s"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:386
 #, python-format
@@ -1306,7 +1306,7 @@ msgstr ""
 
 #: ../nova/api/ec2/cloud.py:390
 msgid "Invalid port range"
-msgstr "Неверный диапазон портов"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:421
 #, python-format
@@ -1329,7 +1329,7 @@ msgstr ""
 #: ../nova/api/ec2/cloud.py:464
 #, python-format
 msgid "This rule already exists in group %s"
-msgstr "Это правило уже существует в группе %s"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:492
 #, python-format
@@ -1339,7 +1339,7 @@ msgstr ""
 #: ../nova/api/ec2/cloud.py:495
 #, python-format
 msgid "group %s already exists"
-msgstr "группа %s уже существует"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:507
 #, python-format
@@ -1349,7 +1349,7 @@ msgstr ""
 #: ../nova/api/ec2/cloud.py:584
 #, python-format
 msgid "Create volume of %s GB"
-msgstr "Создание раздела %s ГБ"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:612
 #, python-format
@@ -1402,7 +1402,7 @@ msgstr ""
 #: ../nova/api/ec2/cloud.py:882 ../nova/api/ec2/cloud.py:900
 #, python-format
 msgid "attribute not supported: %s"
-msgstr "аттрибут не поддерживается: %s"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:890
 #, python-format
@@ -1411,7 +1411,7 @@ msgstr ""
 
 #: ../nova/api/ec2/cloud.py:903
 msgid "user or group not specified"
-msgstr "не указан пользователь или группа"
+msgstr ""
 
 #: ../nova/api/ec2/cloud.py:905
 msgid "only group \"all\" is supported"
@@ -1618,7 +1618,7 @@ msgstr ""
 #: ../nova/cloudpipe/pipelib.py:97
 #, python-format
 msgid "Launching VPN for %s"
-msgstr "Запуск VPN для %s"
+msgstr ""
 
 #: ../nova/db/sqlalchemy/migration.py:35
 msgid "python-migrate is not installed. Exiting."
@@ -1631,7 +1631,7 @@ msgstr ""
 
 #: ../nova/api/ec2/__init__.py:121
 msgid "Too many failed authentications."
-msgstr "Слишком много неудачных попыток аутентификации."
+msgstr ""
 
 #: ../nova/api/ec2/__init__.py:131
 #, python-format
@@ -1643,7 +1643,7 @@ msgstr ""
 #: ../nova/api/ec2/__init__.py:169 ../nova/objectstore/handler.py:140
 #, python-format
 msgid "Authentication Failure: %s"
-msgstr "Ошибка аутентификации: %s"
+msgstr ""
 
 #: ../nova/api/ec2/__init__.py:182
 #, python-format
@@ -1653,7 +1653,7 @@ msgstr ""
 #: ../nova/api/ec2/__init__.py:207
 #, python-format
 msgid "action: %s"
-msgstr "действие: %s"
+msgstr ""
 
 #: ../nova/api/ec2/__init__.py:209
 #, python-format
@@ -1694,27 +1694,26 @@ msgstr ""
 #: ../nova/api/ec2/__init__.py:343
 msgid "An unknown error has occurred. Please try your request again."
 msgstr ""
-"Произошла неизвестная ошибка. Пожалуйста, попытайтесь повторить ваш запрос."
 
 #: ../nova/auth/dbdriver.py:84
 #, python-format
 msgid "User %s already exists"
-msgstr "Пользователь %s уже существует"
+msgstr ""
 
 #: ../nova/auth/dbdriver.py:106 ../nova/auth/ldapdriver.py:232
 #, python-format
 msgid "Project can't be created because manager %s doesn't exist"
-msgstr "Проект не может быть создан поскольку менеджер %s не существует"
+msgstr ""
 
 #: ../nova/auth/dbdriver.py:122 ../nova/auth/ldapdriver.py:243
 #, python-format
 msgid "Project can't be created because user %s doesn't exist"
-msgstr "Проект не может быть создан поскольку пользователь %s не существует"
+msgstr ""
 
 #: ../nova/auth/dbdriver.py:135 ../nova/auth/ldapdriver.py:229
 #, python-format
 msgid "Project can't be created because project %s already exists"
-msgstr "Проект не может быть созан поскольку проект %s уже существует"
+msgstr ""
 
 #: ../nova/auth/dbdriver.py:157 ../nova/auth/ldapdriver.py:268
 #, python-format
@@ -1724,12 +1723,12 @@ msgstr ""
 #: ../nova/auth/dbdriver.py:245
 #, python-format
 msgid "User \"%s\" not found"
-msgstr "Пользователь \"%s\" не существует"
+msgstr ""
 
 #: ../nova/auth/dbdriver.py:248
 #, python-format
 msgid "Project \"%s\" not found"
-msgstr "Проект \"%s\" не найден"
+msgstr ""
 
 #: ../nova/virt/xenapi_conn.py:129
 msgid ""
@@ -1860,7 +1859,7 @@ msgstr ""
 #: ../nova/virt/disk.py:91
 #, python-format
 msgid "Failed to mount filesystem: %s"
-msgstr "Ошибка монтирования файловой системы: %s"
+msgstr ""
 
 #: ../nova/virt/disk.py:124
 #, python-format
@@ -1894,12 +1893,12 @@ msgstr ""
 #: ../nova/virt/hyperv.py:148
 #, python-format
 msgid "Starting VM %s "
-msgstr "Запускается VM %s "
+msgstr ""
 
 #: ../nova/virt/hyperv.py:150
 #, python-format
 msgid "Started VM %s "
-msgstr "Запущен VM %s "
+msgstr ""
 
 #: ../nova/virt/hyperv.py:152
 #, python-format
@@ -1944,7 +1943,7 @@ msgstr ""
 #: ../nova/virt/hyperv.py:249
 #, python-format
 msgid "Created disk for %s"
-msgstr "Создан диск для %s"
+msgstr ""
 
 #: ../nova/virt/hyperv.py:253
 #, python-format
@@ -2086,15 +2085,15 @@ msgstr ""
 #: ../nova/rpc.py:103
 #, python-format
 msgid "Unable to connect to AMQP server after %d tries. Shutting down."
-msgstr "Не удалось подключиться к серверу AMQP после %d попыток. Выключение."
+msgstr ""
 
 #: ../nova/rpc.py:122
 msgid "Reconnected to queue"
-msgstr "Переподлючено к очереди"
+msgstr ""
 
 #: ../nova/rpc.py:129
 msgid "Failed to fetch message from queue"
-msgstr "Не удалось получить сообщение из очереди"
+msgstr ""
 
 #: ../nova/rpc.py:159
 #, python-format
@@ -2104,7 +2103,7 @@ msgstr ""
 #: ../nova/rpc.py:178
 #, python-format
 msgid "received %s"
-msgstr "получено %s"
+msgstr ""
 
 #. NOTE(vish): we may not want to ack here, but that means that bad
 #. messages stay in the queue indefinitely, so for now
@@ -2113,12 +2112,12 @@ msgstr "получено %s"
 #: ../nova/rpc.py:191
 #, python-format
 msgid "no method for message: %s"
-msgstr "не определен метод для сообщения: %s"
+msgstr ""
 
 #: ../nova/rpc.py:192
 #, python-format
 msgid "No method for message: %s"
-msgstr "Не определен метод для сообщения: %s"
+msgstr ""
 
 #: ../nova/rpc.py:253
 #, python-format
@@ -2132,12 +2131,12 @@ msgstr ""
 
 #: ../nova/rpc.py:313
 msgid "Making asynchronous call..."
-msgstr "Выполняется асинхронный вызов..."
+msgstr ""
 
 #: ../nova/rpc.py:316
 #, python-format
 msgid "MSG_ID is %s"
-msgstr "MSG_ID is %s"
+msgstr ""
 
 #: ../nova/rpc.py:354
 msgid "Making asynchronous cast..."
@@ -2146,17 +2145,17 @@ msgstr ""
 #: ../nova/rpc.py:364
 #, python-format
 msgid "response %s"
-msgstr "ответ %s"
+msgstr ""
 
 #: ../nova/rpc.py:373
 #, python-format
 msgid "topic is %s"
-msgstr "тема %s"
+msgstr ""
 
 #: ../nova/rpc.py:374
 #, python-format
 msgid "message %s"
-msgstr "сообщение %s"
+msgstr ""
 
 #: ../nova/volume/driver.py:78
 #, python-format
@@ -2479,7 +2478,7 @@ msgstr ""
 #: ../nova/objectstore/handler.py:455
 #, python-format
 msgid "Deleted image: %s"
-msgstr "Удаленное изображение: %s"
+msgstr ""
 
 #: ../nova/auth/manager.py:259
 #, python-format
@@ -2526,20 +2525,20 @@ msgstr ""
 #: ../nova/auth/manager.py:298 ../nova/auth/manager.py:309
 #, python-format
 msgid "Invalid signature for user %s"
-msgstr "Не допустимая подпись для пользователя %s"
+msgstr ""
 
 #: ../nova/auth/manager.py:299 ../nova/auth/manager.py:310
 msgid "Signature does not match"
-msgstr "Подпись не совпадает"
+msgstr ""
 
 #: ../nova/auth/manager.py:380
 msgid "Must specify project"
-msgstr "Необходимо указать проект"
+msgstr ""
 
 #: ../nova/auth/manager.py:414
 #, python-format
 msgid "The %s role can not be found"
-msgstr "Роль %s не может быть найдена"
+msgstr ""
 
 #: ../nova/auth/manager.py:416
 #, python-format
@@ -2574,7 +2573,7 @@ msgstr ""
 #: ../nova/auth/manager.py:533
 #, python-format
 msgid "modifying project %s"
-msgstr "изменение проекта %s"
+msgstr ""
 
 #: ../nova/auth/manager.py:545
 #, python-format
@@ -2589,7 +2588,7 @@ msgstr ""
 #: ../nova/auth/manager.py:592
 #, python-format
 msgid "Deleting project %s"
-msgstr "Удаление проекта %s"
+msgstr ""
 
 #: ../nova/auth/manager.py:650
 #, python-format
@@ -2599,7 +2598,7 @@ msgstr ""
 #: ../nova/auth/manager.py:659
 #, python-format
 msgid "Deleting user %s"
-msgstr "Удаление пользователя %s"
+msgstr ""
 
 #: ../nova/auth/manager.py:669
 #, python-format
@@ -2619,7 +2618,7 @@ msgstr ""
 #: ../nova/auth/manager.py:722
 #, python-format
 msgid "No vpn data for project %s"
-msgstr "Нет vpn данных для проекта %s"
+msgstr ""
 
 #: ../nova/service.py:161
 #, python-format
@@ -2632,7 +2631,7 @@ msgstr ""
 
 #: ../nova/service.py:195
 msgid "The service database object disappeared, Recreating it."
-msgstr "Объект сервиса в базе данных отсутствует, Повторное создание."
+msgstr ""
 
 #: ../nova/service.py:207
 msgid "Recovered model server connection!"
@@ -2650,7 +2649,7 @@ msgstr ""
 #: ../nova/auth/ldapdriver.py:205
 #, python-format
 msgid "LDAP object for %s doesn't exist"
-msgstr "Объект LDAP %s не существует"
+msgstr ""
 
 #: ../nova/auth/ldapdriver.py:348
 #, python-format
@@ -2728,12 +2727,12 @@ msgstr ""
 #: ../nova/api/ec2/admin.py:97
 #, python-format
 msgid "Creating new user: %s"
-msgstr "Создание нового пользователя: %s"
+msgstr ""
 
 #: ../nova/api/ec2/admin.py:105
 #, python-format
 msgid "Deleting user: %s"
-msgstr "Удаление пользователя: %s"
+msgstr ""
 
 #: ../nova/api/ec2/admin.py:127
 #, python-format
@@ -2777,7 +2776,7 @@ msgstr ""
 #: ../nova/api/ec2/admin.py:200
 #, python-format
 msgid "Delete project: %s"
-msgstr "Удалить проект: %s"
+msgstr ""
 
 #: ../nova/api/ec2/admin.py:214
 #, python-format
@@ -2788,121 +2787,3 @@ msgstr ""
 #, python-format
 msgid "Removing user %(user)s from project %(project)s"
 msgstr ""
-
-#, python-format
-#~ msgid "arg: %s\t\tval: %s"
-#~ msgstr "arg: %s\t\tval: %s"
-
-#, python-format
-#~ msgid "Adding role %s to user %s for project %s"
-#~ msgstr "Добавление роли %s для пользователя %s для проекта %s"
-
-#, python-format
-#~ msgid "Removing role %s from user %s for project %s"
-#~ msgstr "Удаление роли %s пользователя %s для проекта %s"
-
-#, python-format
-#~ msgid "Create project %s managed by %s"
-#~ msgstr "Создать проект %s под управлением %s"
-
-#, python-format
-#~ msgid "Removing user %s from project %s"
-#~ msgstr "Удаление пользователя %s с проекта %s"
-
-#, python-format
-#~ msgid "Adding user %s to project %s"
-#~ msgstr "Добавление пользователя %s к проекту %s"
-
-#, python-format
-#~ msgid "User %s is already a member of the group %s"
-#~ msgstr "Пользователь %s уже член группы %s"
-
-#, python-format
-#~ msgid "User %s is not a member of project %s"
-#~ msgstr "Пользователь %s не является членом группы %s"
-
-#, python-format
-#~ msgid "Created project %s with manager %s"
-#~ msgstr "Создан проект %s под управлением %s"
-
-#, python-format
-#~ msgid "Removing role %s from user %s on project %s"
-#~ msgstr "Удаление роли %s пользователя %s в проекте %s"
-
-#, python-format
-#~ msgid "Remove user %s from project %s"
-#~ msgstr "Удалить пользователя %s из проекта %s"
-
-#, python-format
-#~ msgid "Created user %s (admin: %r)"
-#~ msgstr "Создан пользователь %s (администратор: %r)"
-
-#, python-format
-#~ msgid "Adding role %s to user %s in project %s"
-#~ msgstr "Добавление роли %s для пользователя %s в проект %s"
-
-#, python-format
-#~ msgid "Getting object: %s / %s"
-#~ msgstr "Получение объекта: %s / %s"
-
-#, python-format
-#~ msgid "Deleting object: %s / %s"
-#~ msgstr "Удаление объекта: %s / %s"
-
-#, python-format
-#~ msgid "%s: _db_content => %s"
-#~ msgstr "%s: _db_content => %s"
-
-#, python-format
-#~ msgid "Calling %s %s"
-#~ msgstr "Звонок %s %s"
-
-#, python-format
-#~ msgid ""
-#~ "%s\n"
-#~ "Command: %s\n"
-#~ "Exit code: %s\n"
-#~ "Stdout: %r\n"
-#~ "Stderr: %r"
-#~ msgstr ""
-#~ "%s\n"
-#~ "Команда: %s\n"
-#~ "Код завершения: %s\n"
-#~ "Stdout: %r\n"
-#~ "Stderr: %r"
-
-#, python-format
-#~ msgid "AMQP server on %s:%d is unreachable. Trying again in %d seconds."
-#~ msgstr "AMQP сервер %s:%d недоступен. Повторная попытка через %d секунд."
-
-#, python-format
-#~ msgid "Putting object: %s / %s"
-#~ msgstr "Вставка объекта: %s / %s"
-
-#, python-format
-#~ msgid "Starting %s node"
-#~ msgstr "Запускается нода %s"
-
-#, python-format
-#~ msgid "Data store %s is unreachable. Trying again in %d seconds."
-#~ msgstr "Хранилище данных %s недоступно. Повторная попытка через %d секунд."
-
-#, python-format
-#~ msgid "Couldn't get IP, using 127.0.0.1 %s"
-#~ msgstr "Не удалось получить IP, используем 127.0.0.1 %s"
-
-#, python-format
-#~ msgid "Getting from %s: %s"
-#~ msgstr "Получение из %s: %s"
-
-#, python-format
-#~ msgid ""
-#~ "Access key %s has had %d failed authentications and will be locked out for "
-#~ "%d minutes."
-#~ msgstr ""
-#~ "Ключ доступа %s имеет %d неудачных попыток аутентификации и будет "
-#~ "заблокирован на %d минут."
-
-#, python-format
-#~ msgid "Authenticated Request For %s:%s)"
-#~ msgstr "Запрос аутентификации для %s:%s)"
