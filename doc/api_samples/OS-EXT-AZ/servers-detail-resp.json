@@ -1,15 +1,8 @@
 {
     "servers": [
         {
-            "OS-DCF:diskConfig": "AUTO",
             "OS-EXT-AZ:availability_zone": null,
             "OS-EXT-AZ:host_availability_zone": "nova",
-            "OS-EXT-SRV-ATTR:host": "94d2ccc30d73475ab987661158405463",
-            "OS-EXT-SRV-ATTR:hypervisor_hostname": "fake-mini",
-            "OS-EXT-SRV-ATTR:instance_name": "instance-00000001",
-            "OS-EXT-STS:power_state": 1,
-            "OS-EXT-STS:task_state": null,
-            "OS-EXT-STS:vm_state": "active",
             "accessIPv4": "",
             "accessIPv6": "",
             "addresses": {
@@ -20,8 +13,7 @@
                     }
                 ]
             },
-            "config_drive": "",
-            "created": "2013-01-30T14:03:44Z",
+            "created": "2013-01-30T13:26:51Z",
             "flavor": {
                 "id": "1",
                 "links": [
@@ -31,8 +23,8 @@
                     }
                 ]
             },
-            "hostId": "f74e355ecde489405dfc0a1a48f2a85a5e2564e2ac6633d2b3e1b525",
-            "id": "033cc72d-708b-473b-ae8e-41064ea3fa21",
+            "hostId": "60c988a84401fa15888a32833e5848e9caa99a45778310ba7b363165",
+            "id": "3dbf5b00-dabc-41ff-b6ab-4409568fae9d",
             "image": {
                 "id": "70a599e0-31e7-49b7-b260-868f441e862b",
                 "links": [
@@ -42,14 +34,13 @@
                     }
                 ]
             },
-            "key_name": null,
             "links": [
                 {
-                    "href": "http://openstack.example.com/v2/openstack/servers/033cc72d-708b-473b-ae8e-41064ea3fa21",
+                    "href": "http://openstack.example.com/v2/openstack/servers/3dbf5b00-dabc-41ff-b6ab-4409568fae9d",
                     "rel": "self"
                 },
                 {
-                    "href": "http://openstack.example.com/openstack/servers/033cc72d-708b-473b-ae8e-41064ea3fa21",
+                    "href": "http://openstack.example.com/openstack/servers/3dbf5b00-dabc-41ff-b6ab-4409568fae9d",
                     "rel": "bookmark"
                 }
             ],
@@ -58,14 +49,9 @@
             },
             "name": "new-server-test",
             "progress": 0,
-            "security_groups": [
-                {
-                    "name": "default"
-                }
-            ],
             "status": "ACTIVE",
             "tenant_id": "openstack",
-            "updated": "2013-01-30T14:03:50Z",
+            "updated": "2013-01-30T13:26:52Z",
             "user_id": "fake"
         }
     ]
