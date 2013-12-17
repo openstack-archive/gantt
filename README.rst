@@ -1,33 +1,21 @@
 OpenStack Nova README
 =====================
 
-OpenStack Nova provides a cloud computing fabric controller,
-supporting a wide variety of virtualization technologies,
-including KVM, Xen, LXC, VMware, and more. In addition to
-its native API, it includes compatibility with the commonly
-encountered Amazon EC2 and S3 APIs.
+Gantt provides a common scheduler framework for use by various
+OpenStack coponenets.
 
-OpenStack Nova is distributed under the terms of the Apache
+OpenStack Gantt is distributed under the terms of the Apache
 License, Version 2.0. The full terms and conditions of this
 license are detailed in the LICENSE file.
-
-Nova primarily consists of a set of Python daemons, though
-it requires and integrates with a number of native system
-components for databases, messaging and virtualization
-capabilities.
 
 To keep updated with new developments in the OpenStack project
 follow `@openstack <http://twitter.com/openstack>`_ on Twitter.
 
-To learn how to deploy OpenStack Nova, consult the documentation
+To learn how to deploy OpenStack, consult the documentation
 available online at:
 
    http://docs.openstack.org
 
-For information about the different compute (hypervisor) drivers
-supported by Nova, read this page on the wiki:
-
-   https://wiki.openstack.org/wiki/HypervisorSupportMatrix
 
 In the unfortunate event that bugs are discovered, they should
 be reported to the appropriate bug tracker. If you obtained
@@ -38,11 +26,11 @@ available at:
 
    http://bugs.launchpad.net/nova
 
-Developers wishing to work on the OpenStack Nova project should
+Developers wishing to work on the OpenStack Gantt project should
 always base their work on the latest Nova code, available from
 the master GIT repository at:
 
-   http://github.com/openstack/nova
+   http://github.com/openstack/gantt
 
 Developers should also join the discussion on the mailing list,
 at:
@@ -55,7 +43,7 @@ developer focused documentation is available at:
 
    http://nova.openstack.org/
 
-For information on how to contribute to Nova, please see the
+For information on how to contribute to Gantt, please see the
 contents of the CONTRIBUTING.rst file.
 
 -- End of broadcast
