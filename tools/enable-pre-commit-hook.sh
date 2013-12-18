@@ -27,7 +27,7 @@ make_hook() {
     fi
 }
 
-# NOTE(jk0): Make sure we are in nova's root directory before adding the hook.
+# NOTE(jk0): Make sure we are in gantt's root directory before adding the hook.
 if [ ! -d ".git" ]; then
     echo "unable to find .git; moving up a directory"
     cd ..

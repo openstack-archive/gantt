@@ -31,14 +31,12 @@ from pylint.reporters import text
 # Note(maoy): E1103 is error code related to partial type inference
 ignore_codes = ["E1103"]
 # Note(maoy): the error message is the pattern of E0202. It should be ignored
-# for nova.tests modules
-ignore_messages = ["An attribute affected in nova.tests"]
+# for gantt.tests modules
+ignore_messages = ["An attribute affected in gantt.tests"]
 # Note(maoy): we ignore all errors in openstack.common because it should be
-# checked elsewhere. We also ignore nova.tests for now due to high false
+# checked elsewhere. We also ignore gantt.tests for now due to high false
 # positive rate.
-# Note(danms): we ignore all errors in nova.objects because the false
-# positive rate should be very high.
-ignore_modules = ["nova/openstack/common/", "nova/tests/", "nova/objects/"]
+ignore_modules = ["gantt/openstack/common/", "gantt/tests/"]
 
 KNOWN_PYLINT_EXCEPTIONS_FILE = "tools/pylint_exceptions"
 
@@ -133,7 +131,7 @@ class ErrorKeys(object):
 def run_pylint():
     buff = StringIO.StringIO()
     reporter = text.ParseableTextReporter(output=buff)
-    args = ["--include-ids=y", "-E", "nova"]
+    args = ["--include-ids=y", "-E", "gantt"]
     lint.Run(args, reporter=reporter, exit=False)
     val = buff.getvalue()
     buff.close()
