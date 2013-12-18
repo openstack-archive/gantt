@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# nova documentation build configuration file, created by
+# gantt documentation build configuration file, created by
 # sphinx-quickstart on Sat May  1 15:17:47 2010.
 #
 # This file is execfile()d with the current directory set to
@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.abspath('./'))
 
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.intersphinx',
-              'ext.nova_todo',
+              'ext.gantt_todo',
               'sphinx.ext.coverage',
               'sphinx.ext.pngmath',
               'sphinx.ext.ifconfig',
@@ -59,14 +59,14 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'nova'
+project = u'gantt'
 copyright = u'2010-present, OpenStack Foundation'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-from nova.version import version_info
+from gantt.version import version_info
 # The full version, including alpha/beta/rc tags.
 release = version_info.release_string()
 # The short X.Y version.
@@ -112,7 +112,7 @@ show_authors = False
 pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
-modindex_common_prefix = ['nova.']
+modindex_common_prefix = ['gantt.']
 
 # -- Options for man page output ----------------------------------------------
 
@@ -120,45 +120,7 @@ modindex_common_prefix = ['nova.']
 # List of tuples 'sourcefile', 'target', u'title', u'Authors name', 'manual'
 
 man_pages = [
-    ('man/nova-all', 'nova-all', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-api-ec2', 'nova-api-ec2', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-api-metadata', 'nova-api-metadata', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-api-os-compute', 'nova-api-os-compute',
-     u'Cloud controller fabric', [u'OpenStack'], 1),
-    ('man/nova-api', 'nova-api', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-cert', 'nova-cert', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-compute', 'nova-compute', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-console', 'nova-console', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-consoleauth', 'nova-consoleauth', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-dhcpbridge', 'nova-dhcpbridge', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-manage', 'nova-manage', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-network', 'nova-network', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-novncproxy', 'nova-novncproxy', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-spicehtml5proxy', 'nova-spicehtml5proxy', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-objectstore', 'nova-objectstore', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-rootwrap', 'nova-rootwrap', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-rpc-zmq-receiver', 'nova-rpc-zmq-receiver', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-scheduler', 'nova-scheduler', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-xvpvncproxy', 'nova-xvpvncproxy', u'Cloud controller fabric',
-     [u'OpenStack'], 1),
-    ('man/nova-conductor', 'nova-conductor', u'Cloud controller fabric',
+    ('man/gantt-scheduler', 'gantt-scheduler', u'Cloud controller fabric',
      [u'OpenStack'], 1),
 ]
 
@@ -236,7 +198,7 @@ html_last_updated_fmt = os.popen(git_cmd).read()
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'novadoc'
+htmlhelp_basename = 'ganttdoc'
 
 
 # -- Options for LaTeX output -------------------------------------------------
