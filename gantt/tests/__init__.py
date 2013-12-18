@@ -17,29 +17,20 @@
 #    under the License.
 
 """
-:mod:`nova.tests` -- Nova Unittests
+:mod:`gantt.tests` -- Gantt Unittests
 =====================================================
 
-.. automodule:: nova.tests
+.. automodule:: gantt.tests
    :platform: Unix
+.. moduleauthor:: Jesse Andrews <jesse@ansolabs.com>
+.. moduleauthor:: Devin Carlen <devin.carlen@gmail.com>
+.. moduleauthor:: Vishvananda Ishaya <vishvananda@gmail.com>
+.. moduleauthor:: Joshua McKenty <joshua@cognition.ca>
+.. moduleauthor:: Manish Singh <yosh@gimp.org>
+.. moduleauthor:: Andy Smith <andy@anarkystic.com>
+.. moduleauthor:: Don Dugger <donald.d.dugger@intel.com>
 """
-
-# TODO(mikal): move eventlet imports to nova.__init__ once we move to PBR
-import os
-import sys
-
-# NOTE(mikal): All of this is because if dnspython is present in your
-# environment then eventlet monkeypatches socket.getaddrinfo() with an
-# implementation which doesn't work for IPv6. What we're checking here is
-# that the magic environment variable was set when the import happened.
-if ('eventlet' in sys.modules and
-        os.environ.get('EVENTLET_NO_GREENDNS', '').lower() != 'yes'):
-    raise ImportError('eventlet imported before nova/cmd/__init__ '
-                      '(env var set to %s)'
-                      % os.environ.get('EVENTLET_NO_GREENDNS'))
-
-os.environ['EVENTLET_NO_GREENDNS'] = 'yes'
 
 import eventlet
 
-eventlet.monkey_patch(os=False)
+eventlet.monkey_patch()
