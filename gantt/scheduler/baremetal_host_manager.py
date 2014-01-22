@@ -18,7 +18,7 @@
 Manage hosts in the current zone.
 """
 
-from nova.scheduler import host_manager
+from gantt.scheduler import host_manager
 
 
 class BaremetalNodeState(host_manager.HostState):

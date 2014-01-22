@@ -24,8 +24,9 @@ from nova.conductor import api as conductor_api
 from nova import db
 from nova import notifications
 from nova import notifier as notify
-from nova.scheduler import utils as scheduler_utils
-from nova import test
+
+from gantt.scheduler import utils as scheduler_utils
+from gantt import test
 
 CONF = cfg.CONF
 

@@ -14,7 +14,7 @@
 #    under the License.
 
 
-from nova.scheduler import filters
+from gantt.scheduler import filters
 
 
 class AllHostsFilter(filters.BaseHostFilter):
