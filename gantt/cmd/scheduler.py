@@ -28,7 +28,7 @@ from nova import service
 from nova import utils
 
 CONF = cfg.CONF
-CONF.import_opt('scheduler_topic', 'nova.scheduler.rpcapi')
+CONF.import_opt('scheduler_topic', 'gantt.scheduler.rpcapi')
 
 
 def main():

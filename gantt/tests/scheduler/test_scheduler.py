@@ -35,16 +35,17 @@ from nova.image import glance
 from nova import notifier as notify
 from nova.objects import instance as instance_obj
 from nova.openstack.common.rpc import common as rpc_common
-from nova.scheduler import driver
-from nova.scheduler import manager
 from nova import servicegroup
-from nova import test
-from nova.tests import fake_instance
-from nova.tests import fake_instance_actions
-from nova.tests.image import fake as fake_image
-from nova.tests import matchers
-from nova.tests.scheduler import fakes
 from nova import utils
+
+from gantt.scheduler import driver
+from gantt.scheduler import manager
+from gantt import test
+from gantt.tests import fake_instance
+from gantt.tests import fake_instance_actions
+from gantt.tests.image import fake as fake_image
+from gantt.tests import matchers
+from gantt.tests.scheduler import fakes
 
 CONF = cfg.CONF
 
@@ -54,7 +55,7 @@ class SchedulerManagerTestCase(test.NoDBTestCase):
 
     manager_cls = manager.SchedulerManager
     driver_cls = driver.Scheduler
-    driver_cls_name = 'nova.scheduler.driver.Scheduler'
+    driver_cls_name = 'gantt.scheduler.driver.Scheduler'
 
     def setUp(self):
         super(SchedulerManagerTestCase, self).setUp()

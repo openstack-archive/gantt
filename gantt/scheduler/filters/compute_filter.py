@@ -17,8 +17,9 @@ from oslo.config import cfg
 
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
-from nova.scheduler import filters
 from nova import servicegroup
+
+from gantt.scheduler import filters
 
 CONF = cfg.CONF
 
