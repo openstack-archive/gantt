@@ -17,7 +17,7 @@
 Scheduler host filters
 """
 
-from nova import filters
+from gantt import filters
 
 
 class BaseHostFilter(filters.BaseFilter):

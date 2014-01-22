@@ -13,3 +13,5 @@ sphinx>=1.1.2,<1.2
 oslo.sphinx
 testrepository>=0.0.17
 testtools>=0.9.32
+
+http://tarballs.openstack.org/nova/nova-master.tar.gz#egg=nova

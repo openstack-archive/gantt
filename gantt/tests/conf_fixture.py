@@ -50,9 +50,9 @@ class ConfFixture(config_fixture.Config):
         self.conf.set_default('fake_network', True)
         self.conf.set_default('flat_network_bridge', 'br100')
         self.conf.set_default('floating_ip_dns_manager',
-                              'nova.tests.utils.dns_manager')
+                              'gantt.tests.utils.dns_manager')
         self.conf.set_default('instance_dns_manager',
-                              'nova.tests.utils.dns_manager')
+                              'gantt.tests.utils.dns_manager')
         self.conf.set_default('network_size', 8)
         self.conf.set_default('num_networks', 2)
         self.conf.set_default('rpc_backend',
