@@ -15,7 +15,7 @@
 
 from oslo.config import cfg
 
-from nova.scheduler import filters
+from gantt.scheduler import filters
 
 isolated_opts = [
     cfg.ListOpt('isolated_images',

@@ -26,13 +26,14 @@ from nova import context
 from nova import db
 from nova import exception
 from nova.pci import pci_request
-from nova.scheduler import driver
-from nova.scheduler import filter_scheduler
-from nova.scheduler import host_manager
-from nova.scheduler import utils as scheduler_utils
-from nova.scheduler import weights
-from nova.tests.scheduler import fakes
-from nova.tests.scheduler import test_scheduler
+
+from gantt.scheduler import driver
+from gantt.scheduler import filter_scheduler
+from gantt.scheduler import host_manager
+from gantt.scheduler import utils as scheduler_utils
+from gantt.scheduler import weights
+from gantt.tests.scheduler import fakes
+from gantt.tests.scheduler import test_scheduler
 
 
 def fake_get_filtered_hosts(hosts, filter_properties, index):
