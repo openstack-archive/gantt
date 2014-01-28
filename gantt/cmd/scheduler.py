@@ -22,20 +22,21 @@ import sys
 
 from oslo.config import cfg
 
-from nova import config
 from nova.openstack.common import log as logging
-from nova import service
 from nova import utils
 
+from gantt import config
+from gantt import service
+
 CONF = cfg.CONF
-CONF.import_opt('scheduler_topic', 'nova.scheduler.rpcapi')
+CONF.import_opt('sched_topic', 'gantt.scheduler.rpcapi')
 
 
 def main():
     config.parse_args(sys.argv)
-    logging.setup("nova")
+    logging.setup("gantt")
     utils.monkey_patch()
-    server = service.Service.create(binary='nova-scheduler',
-                                    topic=CONF.scheduler_topic)
+    server = service.Service.create(binary='gantt-sched',
+                                    topic=CONF.sched_topic)
     service.serve(server)
     service.wait()

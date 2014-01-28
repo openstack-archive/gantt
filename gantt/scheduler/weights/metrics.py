@@ -30,7 +30,8 @@ from oslo.config import cfg
 from nova import exception
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
-from nova.scheduler import weights
+
+from gantt.scheduler import weights
 
 metrics_weight_opts = [
         cfg.FloatOpt('weight_multiplier',
