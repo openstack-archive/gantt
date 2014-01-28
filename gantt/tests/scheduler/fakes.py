@@ -21,8 +21,9 @@ import mox
 from nova.compute import vm_states
 from nova import db
 from nova.openstack.common import jsonutils
-from nova.scheduler import filter_scheduler
-from nova.scheduler import host_manager
+
+from gantt.scheduler import filter_scheduler
+from gantt.scheduler import host_manager
 
 
 COMPUTE_NODES = [

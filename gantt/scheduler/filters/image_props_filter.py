@@ -18,8 +18,9 @@ from distutils import versionpredicate
 
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
-from nova.scheduler import filters
 from nova import utils
+
+from gantt.scheduler import filters
 
 
 LOG = logging.getLogger(__name__)

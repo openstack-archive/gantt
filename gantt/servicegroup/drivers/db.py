@@ -21,11 +21,12 @@ from nova import context
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
 from nova.openstack.common import timeutils
-from nova.servicegroup import api
+
+from gantt.servicegroup import api
 
 
 CONF = cfg.CONF
-CONF.import_opt('service_down_time', 'nova.service')
+CONF.import_opt('service_down_time', 'gantt.service')
 
 LOG = logging.getLogger(__name__)
 

@@ -25,13 +25,14 @@ from nova import db
 from nova.openstack.common import jsonutils
 from nova.openstack.common import timeutils
 from nova.pci import pci_stats
-from nova.scheduler import filters
-from nova.scheduler.filters import extra_specs_ops
-from nova.scheduler.filters import trusted_filter
-from nova import servicegroup
-from nova import test
-from nova.tests.scheduler import fakes
 from nova import utils
+
+from gantt.scheduler import filters
+from gantt.scheduler.filters import extra_specs_ops
+from gantt.scheduler.filters import trusted_filter
+from gantt import servicegroup
+from gantt import test
+from gantt.tests.scheduler import fakes
 
 CONF = cfg.CONF
 CONF.import_opt('my_ip', 'nova.netconf')
@@ -256,7 +257,7 @@ class HostFiltersTestCase(test.NoDBTestCase):
                         ['>=', '$free_disk_mb', 200 * 1024]])
         filter_handler = filters.HostFilterHandler()
         classes = filter_handler.get_matching_classes(
-                ['nova.scheduler.filters.all_filters'])
+                ['gantt.scheduler.filters.all_filters'])
         self.class_map = {}
         for cls in classes:
             self.class_map[cls.__name__] = cls
