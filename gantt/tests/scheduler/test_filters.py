@@ -18,9 +18,10 @@ Tests For Scheduler Host Filters.
 import inspect
 import sys
 
-from nova import filters
 from nova import loadables
-from nova import test
+
+from gantt import filters
+from gantt import test
 
 
 class Filter1(filters.BaseFilter):
