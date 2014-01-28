@@ -29,9 +29,10 @@ from nova import notifier
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
 from nova.pci import pci_request
-from nova.scheduler import driver
-from nova.scheduler import scheduler_options
-from nova.scheduler import utils as scheduler_utils
+
+from gantt.scheduler import driver
+from gantt.scheduler import scheduler_options
+from gantt.scheduler import utils as scheduler_utils
 
 
 CONF = cfg.CONF

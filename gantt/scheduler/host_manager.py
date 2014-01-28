@@ -32,15 +32,16 @@ from nova.openstack.common import log as logging
 from nova.openstack.common import timeutils
 from nova.pci import pci_request
 from nova.pci import pci_stats
-from nova.scheduler import filters
-from nova.scheduler import weights
+
+from gantt.scheduler import filters
+from gantt.scheduler import weights
 
 host_manager_opts = [
     cfg.MultiStrOpt('scheduler_available_filters',
-            default=['nova.scheduler.filters.all_filters'],
+            default=['gantt.scheduler.filters.all_filters'],
             help='Filter classes available to the scheduler which may '
                     'be specified more than once.  An entry of '
-                    '"nova.scheduler.filters.standard_filters" '
+                    '"gantt.scheduler.filters.standard_filters" '
                     'maps to all filters included with nova.'),
     cfg.ListOpt('scheduler_default_filters',
                 default=[
@@ -54,7 +55,7 @@ host_manager_opts = [
                 help='Which filter class names to use for filtering hosts '
                       'when not specified in the request.'),
     cfg.ListOpt('scheduler_weight_classes',
-                default=['nova.scheduler.weights.all_weighers'],
+                default=['gantt.scheduler.weights.all_weighers'],
                 help='Which weight class names to use for weighing hosts'),
     ]
 

@@ -17,8 +17,9 @@
 from nova import db
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
-from nova.scheduler import filters
-from nova.scheduler.filters import extra_specs_ops
+
+from gantt.scheduler import filters
+from gantt.scheduler.filters import extra_specs_ops
 
 
 LOG = logging.getLogger(__name__)

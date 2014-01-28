@@ -36,7 +36,7 @@ ignore_messages = ["An attribute affected in gantt.tests"]
 # Note(maoy): we ignore all errors in openstack.common because it should be
 # checked elsewhere. We also ignore gantt.tests for now due to high false
 # positive rate.
-ignore_modules = ["gantt/openstack/common/", "gantt/tests/"]
+ignore_modules = ["gantt/tests/"]
 
 KNOWN_PYLINT_EXCEPTIONS_FILE = "tools/pylint_exceptions"
 

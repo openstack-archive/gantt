@@ -20,8 +20,9 @@ import datetime
 import StringIO
 
 from nova.openstack.common import jsonutils
-from nova.scheduler import scheduler_options
-from nova import test
+
+from gantt.scheduler import scheduler_options
+from gantt import test
 
 
 class FakeSchedulerOptions(scheduler_options.SchedulerOptions):

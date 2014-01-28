@@ -36,13 +36,14 @@ from nova.openstack.common.gettextutils import _
 from nova.openstack.common import importutils
 from nova.openstack.common import log as logging
 from nova.openstack.common import timeutils
-from nova import servicegroup
+
+from gantt import servicegroup
 
 LOG = logging.getLogger(__name__)
 
 scheduler_driver_opts = [
     cfg.StrOpt('scheduler_host_manager',
-               default='nova.scheduler.host_manager.HostManager',
+               default='gantt.scheduler.host_manager.HostManager',
                help='The scheduler host manager class to use'),
     cfg.IntOpt('scheduler_max_attempts',
                default=3,
