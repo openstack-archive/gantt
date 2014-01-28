@@ -15,10 +15,10 @@
 #    under the License.
 
 """
-:mod:`nova.scheduler` -- Scheduler Nodes
+:mod:`gantt.scheduler` -- Scheduler Nodes
 =====================================================
 
-.. automodule:: nova.scheduler
+.. automodule:: gantt.scheduler
    :platform: Unix
    :synopsis: Module that picks a compute node to run a VM instance.
 .. moduleauthor:: Sandy Walsh <sandy.walsh@rackspace.com>

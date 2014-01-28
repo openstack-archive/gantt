@@ -33,10 +33,11 @@ from nova.openstack.common import importutils
 from nova.openstack.common import log as logging
 from nova.openstack.common import rpc
 from nova.openstack.common import service
-from nova import servicegroup
 from nova import utils
-from nova import version
 from nova import wsgi
+
+from gantt import servicegroup
+from gantt import version
 
 LOG = logging.getLogger(__name__)
 
@@ -97,8 +98,8 @@ service_opts = [
     cfg.StrOpt('network_manager',
                default='nova.network.manager.VlanManager',
                help='full class name for the Manager for network'),
-    cfg.StrOpt('scheduler_manager',
-               default='nova.scheduler.manager.SchedulerManager',
+    cfg.StrOpt('sched_manager',
+               default='gantt.scheduler.manager.SchedulerManager',
                help='full class name for the Manager for scheduler'),
     cfg.IntOpt('service_down_time',
                default=60,
@@ -225,7 +226,7 @@ class Service(service.Service):
 
         :param host: defaults to CONF.host
         :param binary: defaults to basename of executable
-        :param topic: defaults to bin_name - 'nova-' part
+        :param topic: defaults to bin_name - 'gantt-' part
         :param manager: defaults to CONF.<topic>_manager
         :param report_interval: defaults to CONF.report_interval
         :param periodic_enable: defaults to CONF.periodic_enable
@@ -238,10 +239,10 @@ class Service(service.Service):
         if not binary:
             binary = os.path.basename(sys.argv[0])
         if not topic:
-            topic = binary.rpartition('nova-')[2]
+            topic = binary.rpartition('gantt-')[2]
         if not manager:
             manager_cls = ('%s_manager' %
-                           binary.rpartition('nova-')[2])
+                           binary.rpartition('gantt-')[2])
             manager = CONF.get(manager_cls, None)
         if report_interval is None:
             report_interval = CONF.report_interval
