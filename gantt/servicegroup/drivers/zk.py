@@ -24,7 +24,8 @@ from nova.openstack.common.gettextutils import _
 from nova.openstack.common import importutils
 from nova.openstack.common import log as logging
 from nova.openstack.common import loopingcall
-from nova.servicegroup import api
+
+from gantt.servicegroup import api
 
 evzookeeper = importutils.try_import('evzookeeper')
 membership = importutils.try_import('evzookeeper.membership')
