@@ -1,3 +1,5 @@
+# vim: tabstop=4 shiftwidth=4 softtabstop=4
+
 #    Copyright 2011 OpenStack Foundation
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -14,10 +16,78 @@
 
 import pbr.version
 
-GANTT_VENDOR = "OpenStack Foundation"
-GANTT_PRODUCT = "OpenStack Gantt"
-GANTT_PACKAGE = None  # OS distro package version suffix
+from nova.openstack.common.gettextutils import _
+
+NOVA_VENDOR = "OpenStack Foundation"
+NOVA_PRODUCT = "OpenStack Nova"
+NOVA_PACKAGE = None  # OS distro package version suffix
 
 loaded = False
-version_info = pbr.version.VersionInfo('gantt')
+version_info = pbr.version.VersionInfo('nova')
 version_string = version_info.version_string
+
+
+def _load_config():
+    # Don't load in global context, since we can't assume
+    # these modules are accessible when distutils uses
+    # this module
+    import ConfigParser
+
+    from oslo.config import cfg
+
+    from nova.openstack.common import log as logging
+
+    global loaded, NOVA_VENDOR, NOVA_PRODUCT, NOVA_PACKAGE
+    if loaded:
+        return
+
+    loaded = True
+
+    cfgfile = cfg.CONF.find_file("release")
+    if cfgfile is None:
+        return
+
+    try:
+        cfg = ConfigParser.RawConfigParser()
+        cfg.read(cfgfile)
+
+        NOVA_VENDOR = cfg.get("Nova", "vendor")
+        if cfg.has_option("Nova", "vendor"):
+            NOVA_VENDOR = cfg.get("Nova", "vendor")
+
+        NOVA_PRODUCT = cfg.get("Nova", "product")
+        if cfg.has_option("Nova", "product"):
+            NOVA_PRODUCT = cfg.get("Nova", "product")
+
+        NOVA_PACKAGE = cfg.get("Nova", "package")
+        if cfg.has_option("Nova", "package"):
+            NOVA_PACKAGE = cfg.get("Nova", "package")
+    except Exception as ex:
+        LOG = logging.getLogger(__name__)
+        LOG.error(_("Failed to load %(cfgfile)s: %(ex)s"),
+                  {'cfgfile': cfgfile, 'ex': ex})
+
+
+def vendor_string():
+    _load_config()
+
+    return NOVA_VENDOR
+
+
+def product_string():
+    _load_config()
+
+    return NOVA_PRODUCT
+
+
+def package_string():
+    _load_config()
+
+    return NOVA_PACKAGE
+
+
+def version_string_with_package():
+    if package_string() is None:
+        return version_info.version_string()
+    else:
+        return "%s-%s" % (version_info.version_string(), package_string())
