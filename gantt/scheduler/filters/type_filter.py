@@ -15,7 +15,8 @@
 #    under the License.
 
 from nova import db
-from nova.scheduler import filters
+
+from gantt.scheduler import filters
 
 
 class TypeAffinityFilter(filters.BaseHostFilter):

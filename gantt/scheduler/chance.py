@@ -28,7 +28,8 @@ from oslo.config import cfg
 from nova.compute import rpcapi as compute_rpcapi
 from nova import exception
 from nova.openstack.common.gettextutils import _
-from nova.scheduler import driver
+
+from gantt.scheduler import driver
 
 CONF = cfg.CONF
 CONF.import_opt('compute_topic', 'nova.compute.rpcapi')
