@@ -56,7 +56,8 @@ from nova.openstack.common.gettextutils import _
 from nova.openstack.common import jsonutils
 from nova.openstack.common import log as logging
 from nova.openstack.common import timeutils
-from nova.scheduler import filters
+
+from gantt.scheduler import filters
 
 LOG = logging.getLogger(__name__)
 

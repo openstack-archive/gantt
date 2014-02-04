@@ -15,7 +15,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from nova.scheduler import filters
+from gantt.scheduler import filters
 
 
 class PciPassthroughFilter(filters.BaseHostFilter):

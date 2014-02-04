@@ -19,10 +19,11 @@ Tests For Scheduler weights.
 from nova import context
 from nova import exception
 from nova.openstack.common.fixture import mockpatch
-from nova.scheduler import weights
-from nova import test
-from nova.tests import matchers
-from nova.tests.scheduler import fakes
+
+from gantt.scheduler import weights
+from gantt import test
+from gantt.tests import matchers
+from gantt.tests.scheduler import fakes
 
 
 class TestWeighedHost(test.NoDBTestCase):
@@ -50,7 +51,7 @@ class RamWeigherTestCase(test.NoDBTestCase):
         self.host_manager = fakes.FakeHostManager()
         self.weight_handler = weights.HostWeightHandler()
         self.weight_classes = self.weight_handler.get_matching_classes(
-                ['nova.scheduler.weights.ram.RAMWeigher'])
+                ['gantt.scheduler.weights.ram.RAMWeigher'])
 
     def _get_weighed_host(self, hosts, weight_properties=None):
         if weight_properties is None:
@@ -113,7 +114,7 @@ class MetricsWeigherTestCase(test.NoDBTestCase):
         self.host_manager = fakes.FakeHostManager()
         self.weight_handler = weights.HostWeightHandler()
         self.weight_classes = self.weight_handler.get_matching_classes(
-                ['nova.scheduler.weights.metrics.MetricsWeigher'])
+                ['gantt.scheduler.weights.metrics.MetricsWeigher'])
 
     def _get_weighed_host(self, hosts, setting, weight_properties=None):
         if not weight_properties:
