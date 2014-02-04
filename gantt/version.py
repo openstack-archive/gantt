@@ -16,12 +16,14 @@
 
 import pbr.version
 
-NOVA_VENDOR = "OpenStack Foundation"
-NOVA_PRODUCT = "OpenStack Nova"
-NOVA_PACKAGE = None  # OS distro package version suffix
+from nova.openstack.common.gettextutils import _
+
+GANTT_VENDOR = "OpenStack Foundation"
+GANTT_PRODUCT = "OpenStack Gantt"
+GANTT_PACKAGE = None  # OS distro package version suffix
 
 loaded = False
-version_info = pbr.version.VersionInfo('nova')
+version_info = pbr.version.VersionInfo('gantt')
 version_string = version_info.version_string
 
 
@@ -35,7 +37,7 @@ def _load_config():
 
     from nova.openstack.common import log as logging
 
-    global loaded, NOVA_VENDOR, NOVA_PRODUCT, NOVA_PACKAGE
+    global loaded, GANTT_VENDOR, GANTT_PRODUCT, GANTT_PACKAGE
     if loaded:
         return
 
@@ -49,17 +51,17 @@ def _load_config():
         cfg = ConfigParser.RawConfigParser()
         cfg.read(cfgfile)
 
-        NOVA_VENDOR = cfg.get("Nova", "vendor")
-        if cfg.has_option("Nova", "vendor"):
-            NOVA_VENDOR = cfg.get("Nova", "vendor")
+        GANTT_VENDOR = cfg.get("Gantt", "vendor")
+        if cfg.has_option("Gantt", "vendor"):
+            GANTT_VENDOR = cfg.get("Gantt", "vendor")
 
-        NOVA_PRODUCT = cfg.get("Nova", "product")
-        if cfg.has_option("Nova", "product"):
-            NOVA_PRODUCT = cfg.get("Nova", "product")
+        GANTT_PRODUCT = cfg.get("Gantt", "product")
+        if cfg.has_option("Gantt", "product"):
+            GANTT_PRODUCT = cfg.get("Gantt", "product")
 
-        NOVA_PACKAGE = cfg.get("Nova", "package")
-        if cfg.has_option("Nova", "package"):
-            NOVA_PACKAGE = cfg.get("Nova", "package")
+        GANTT_PACKAGE = cfg.get("Gantt", "package")
+        if cfg.has_option("Gantt", "package"):
+            GANTT_PACKAGE = cfg.get("Gantt", "package")
     except Exception as ex:
         LOG = logging.getLogger(__name__)
         LOG.error(_("Failed to load %(cfgfile)s: %(ex)s"),
@@ -69,19 +71,19 @@ def _load_config():
 def vendor_string():
     _load_config()
 
-    return NOVA_VENDOR
+    return GANTT_VENDOR
 
 
 def product_string():
     _load_config()
 
-    return NOVA_PRODUCT
+    return GANTT_PRODUCT
 
 
 def package_string():
     _load_config()
 
-    return NOVA_PACKAGE
+    return GANTT_PACKAGE
 
 
 def version_string_with_package():

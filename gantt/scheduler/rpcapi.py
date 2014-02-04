@@ -26,7 +26,7 @@ from nova.openstack.common import jsonutils
 from gantt import rpcclient
 
 rpcapi_opts = [
-    cfg.StrOpt('scheduler_topic',
+    cfg.StrOpt('sched_topic',
                default='scheduler',
                help='the topic scheduler nodes listen on'),
 ]
@@ -100,7 +100,7 @@ class SchedulerAPI(rpcclient.RpcProxy):
     def __init__(self):
         version_cap = self.VERSION_ALIASES.get(CONF.upgrade_levels.scheduler,
                                                CONF.upgrade_levels.scheduler)
-        super(SchedulerAPI, self).__init__(topic=CONF.scheduler_topic,
+        super(SchedulerAPI, self).__init__(topic=CONF.sched_topic,
                 default_version=self.BASE_RPC_API_VERSION,
                 serializer=objects_base.NovaObjectSerializer(),
                 version_cap=version_cap)

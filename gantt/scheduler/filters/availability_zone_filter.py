@@ -16,7 +16,8 @@
 from oslo.config import cfg
 
 from nova import db
-from nova.scheduler import filters
+
+from gantt.scheduler import filters
 
 CONF = cfg.CONF
 CONF.import_opt('default_availability_zone', 'nova.availability_zones')
