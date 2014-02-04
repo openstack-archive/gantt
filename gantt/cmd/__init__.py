@@ -13,7 +13,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-# TODO(mikal): move eventlet imports to nova.__init__ once we move to PBR
+# TODO(mikal): move eventlet imports to gantt.__init__ once we move to PBR
 import os
 import sys
 
@@ -23,7 +23,7 @@ import sys
 # that the magic environment variable was set when the import happened.
 if ('eventlet' in sys.modules and
         os.environ.get('EVENTLET_NO_GREENDNS', '').lower() != 'yes'):
-    raise ImportError('eventlet imported before nova/cmd/__init__ '
+    raise ImportError('eventlet imported before gantt/cmd/__init__ '
                       '(env var set to %s)'
                       % os.environ.get('EVENTLET_NO_GREENDNS'))
 
