@@ -30,7 +30,6 @@ from nova.compute import vm_states
 from nova.conductor import api as conductor_api
 from nova.conductor.tasks import live_migrate
 from nova import exception
-from nova import manager
 from nova.objects import instance as instance_obj
 from nova.openstack.common import excutils
 from nova.openstack.common import importutils
@@ -39,13 +38,15 @@ from nova.openstack.common import log as logging
 from nova.openstack.common import periodic_task
 from nova.openstack.common.rpc import common as rpc_common
 from nova import quota
-from nova.scheduler import utils as scheduler_utils
+
+from gantt import manager
+from gantt.scheduler import utils as scheduler_utils
 
 
 LOG = logging.getLogger(__name__)
 
 scheduler_driver_opt = cfg.StrOpt('scheduler_driver',
-        default='nova.scheduler.filter_scheduler.FilterScheduler',
+        default='gantt.scheduler.filter_scheduler.FilterScheduler',
         help='Default driver to use for the scheduler')
 
 CONF = cfg.CONF

@@ -29,9 +29,10 @@ from nova.conductor import api as conductor_api
 from nova import context
 from nova import db
 from nova import exception
-from nova.scheduler import chance
-from nova.scheduler import driver
-from nova.tests.scheduler import test_scheduler
+
+from gantt.scheduler import chance
+from gantt.scheduler import driver
+from gantt.tests.scheduler import test_scheduler
 
 
 class ChanceSchedulerTestCase(test_scheduler.SchedulerTestCase):

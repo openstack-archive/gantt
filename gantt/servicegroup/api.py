@@ -41,9 +41,9 @@ class API(object):
 
     _driver = None
     _driver_name_class_mapping = {
-        'db': 'nova.servicegroup.drivers.db.DbDriver',
-        'zk': 'nova.servicegroup.drivers.zk.ZooKeeperDriver',
-        'mc': 'nova.servicegroup.drivers.mc.MemcachedDriver'
+        'db': 'gantt.servicegroup.drivers.db.DbDriver',
+        'zk': 'gantt.servicegroup.drivers.zk.ZooKeeperDriver',
+        'mc': 'gantt.servicegroup.drivers.mc.MemcachedDriver'
     }
 
     def __new__(cls, *args, **kwargs):
