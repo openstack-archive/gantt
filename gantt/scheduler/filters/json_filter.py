@@ -18,7 +18,8 @@ import operator
 import six
 
 from nova.openstack.common import jsonutils
-from nova.scheduler import filters
+
+from gantt.scheduler import filters
 
 
 class JsonFilter(filters.BaseHostFilter):

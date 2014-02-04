@@ -21,12 +21,13 @@ from nova import db
 from nova import exception
 from nova.openstack.common import jsonutils
 from nova.openstack.common import timeutils
-from nova.scheduler import filters
-from nova.scheduler import host_manager
-from nova import test
-from nova.tests import matchers
-from nova.tests.scheduler import fakes
 from nova import utils
+
+from gantt.scheduler import filters
+from gantt.scheduler import host_manager
+from gantt import test
+from gantt.tests import matchers
+from gantt.tests.scheduler import fakes
 
 
 class FakeFilterClass1(filters.BaseHostFilter):
