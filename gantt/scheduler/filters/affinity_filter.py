@@ -21,7 +21,8 @@ import six
 from nova.compute import api as compute
 from nova.openstack.common.gettextutils import _
 from nova.openstack.common import log as logging
-from nova.scheduler import filters
+
+from gantt.scheduler import filters
 
 LOG = logging.getLogger(__name__)
 

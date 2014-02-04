@@ -22,7 +22,7 @@ number and the weighing has the opposite effect of the default.
 
 from oslo.config import cfg
 
-from nova.scheduler import weights
+from gantt.scheduler import weights
 
 ram_weight_opts = [
         cfg.FloatOpt('ram_weight_multiplier',

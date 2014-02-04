@@ -23,12 +23,13 @@ from nova import config
 from nova import ipv6
 from nova.openstack.common.fixture import config as config_fixture
 from nova import paths
-from nova.tests import utils
+
+from gantt.tests import utils
 
 CONF = cfg.CONF
 CONF.import_opt('use_ipv6', 'nova.netconf')
 CONF.import_opt('host', 'nova.netconf')
-CONF.import_opt('scheduler_driver', 'nova.scheduler.manager')
+CONF.import_opt('scheduler_driver', 'gantt.scheduler.manager')
 CONF.import_opt('fake_network', 'nova.network.manager')
 CONF.import_opt('network_size', 'nova.network.manager')
 CONF.import_opt('num_networks', 'nova.network.manager')
@@ -50,9 +51,9 @@ class ConfFixture(config_fixture.Config):
         self.conf.set_default('fake_network', True)
         self.conf.set_default('flat_network_bridge', 'br100')
         self.conf.set_default('floating_ip_dns_manager',
-                              'nova.tests.utils.dns_manager')
+                              'gantt.tests.utils.dns_manager')
         self.conf.set_default('instance_dns_manager',
-                              'nova.tests.utils.dns_manager')
+                              'gantt.tests.utils.dns_manager')
         self.conf.set_default('network_size', 8)
         self.conf.set_default('num_networks', 2)
         self.conf.set_default('rpc_backend',
