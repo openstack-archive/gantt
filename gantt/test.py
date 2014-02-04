@@ -49,8 +49,9 @@ from nova.openstack.common import log as logging
 from nova.openstack.common import timeutils
 from nova import paths
 from nova import service
-from nova.tests import conf_fixture
-from nova.tests import policy_fixture
+
+from gantt.tests import conf_fixture
+from gantt.tests import policy_fixture
 
 
 test_opts = [
