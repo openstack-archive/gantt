@@ -17,9 +17,9 @@ Tests For PickledScheduler.
 """
 
 import datetime
-import StringIO
 
 from nova.openstack.common import jsonutils
+import six
 
 from gantt.scheduler import scheduler_options
 from gantt import test
@@ -45,7 +45,7 @@ class FakeSchedulerOptions(scheduler_options.SchedulerOptions):
 
     def _get_file_handle(self, filename):
         self.file_was_loaded = True
-        return StringIO.StringIO(self._file_data)
+        return six.StringIO(self._file_data)
 
     def _get_time_now(self):
         return self._time_now
