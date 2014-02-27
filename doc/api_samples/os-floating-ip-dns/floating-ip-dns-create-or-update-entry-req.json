@@ -1,7 +1,7 @@
 {
-  'dns_entry' :
+  "dns_entry" :
     {
-      'ip': '192.168.53.11',
-      'dns_type': 'A'
+      "ip": "192.168.53.11",
+      "dns_type": "A"
     }
 }
