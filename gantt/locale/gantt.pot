@@ -1,0 +1,566 @@
+# Translations template for gantt.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the gantt project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gantt 2014.1.dev16669.g989a2d0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-03-20 20:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: gantt/context.py:67
+#, python-format
+msgid "Arguments dropped when creating context: %s"
+msgstr ""
+
+#: gantt/context.py:112
+#, python-format
+msgid "read_deleted can only be one of 'no', 'yes' or 'only', not %r"
+msgstr ""
+
+#: gantt/filters.py:70
+#, python-format
+msgid "Starting with %d host(s)"
+msgstr ""
+
+#: gantt/filters.py:79
+#, python-format
+msgid "Filter %(cls_name)s says to stop filtering"
+msgstr ""
+
+#: gantt/filters.py:84
+#, python-format
+msgid "Filter %s returned 0 hosts"
+msgstr ""
+
+#: gantt/filters.py:86
+#, python-format
+msgid "Filter %(cls_name)s returned %(obj_len)d host(s)"
+msgstr ""
+
+#: gantt/policy.py:33
+msgid "JSON file representing policy"
+msgstr ""
+
+#: gantt/policy.py:36
+msgid "Rule checked when requested rule is not found"
+msgstr ""
+
+#: gantt/service.py:152
+#, python-format
+msgid "Starting %(topic)s node (version %(version)s)"
+msgstr ""
+
+#: gantt/service.py:171
+#, python-format
+msgid "Creating Consumer connection for Service %s"
+msgstr ""
+
+#: gantt/service.py:189
+#, python-format
+msgid "Join ServiceGroup membership for this service %s"
+msgstr ""
+
+#: gantt/service.py:269
+msgid "Service killed that has no database entry"
+msgstr ""
+
+#: gantt/service.py:291
+#, python-format
+msgid "Temporary directory is invalid: %s"
+msgstr ""
+
+#: gantt/service.py:393
+msgid "serve() can only be called once"
+msgstr ""
+
+#: gantt/utils.py:159
+#, python-format
+msgid "Expected to receive %(exp)s bytes, but actually %(act)s"
+msgstr ""
+
+#: gantt/utils.py:365
+#, python-format
+msgid "Couldn't get IPv4 : %(ex)s"
+msgstr ""
+
+#: gantt/utils.py:381
+#, python-format
+msgid "IPv4 address is not found.: %s"
+msgstr ""
+
+#: gantt/utils.py:384
+#, python-format
+msgid "Couldn't get IPv4 of %(interface)s : %(ex)s"
+msgstr ""
+
+#: gantt/utils.py:399
+#, python-format
+msgid "Link Local address is not found.:%s"
+msgstr ""
+
+#: gantt/utils.py:402
+#, python-format
+msgid "Couldn't get Link Local IP of %(interface)s :%(ex)s"
+msgstr ""
+
+#: gantt/utils.py:423
+#, python-format
+msgid "Invalid backend: %s"
+msgstr ""
+
+#: gantt/utils.py:468
+#, python-format
+msgid "Expected object of type: %s"
+msgstr ""
+
+#: gantt/utils.py:497
+#, python-format
+msgid "Invalid server_string: %s"
+msgstr ""
+
+#: gantt/utils.py:670
+#, python-format
+msgid "Reloading cached file %s"
+msgstr ""
+
+#: gantt/utils.py:784
+#, python-format
+msgid "Could not remove tmpdir: %s"
+msgstr ""
+
+#: gantt/utils.py:953
+#, python-format
+msgid "%s is not a string or unicode"
+msgstr ""
+
+#: gantt/utils.py:957
+#, python-format
+msgid "%(name)s has a minimum character requirement of %(min_length)s."
+msgstr ""
+
+#: gantt/utils.py:962
+#, python-format
+msgid "%(name)s has more than %(max_length)s characters."
+msgstr ""
+
+#: gantt/utils.py:972
+#, python-format
+msgid "%(value_name)s must be an integer"
+msgstr ""
+
+#: gantt/utils.py:978
+#, python-format
+msgid "%(value_name)s must be >= %(min_value)d"
+msgstr ""
+
+#: gantt/utils.py:984
+#, python-format
+msgid "%(value_name)s must be <= %(max_value)d"
+msgstr ""
+
+#: gantt/utils.py:1046
+#, python-format
+msgid "Version %s invalid"
+msgstr ""
+
+#: gantt/version.py:67
+#, python-format
+msgid "Failed to load %(cfgfile)s: %(ex)s"
+msgstr ""
+
+#: gantt/scheduler/chance.py:58
+msgid "Is the appropriate service running?"
+msgstr ""
+
+#: gantt/scheduler/chance.py:63
+msgid "Could not find another compute"
+msgstr ""
+
+#: gantt/scheduler/driver.py:63
+msgid "Exception during scheduler.run_instance"
+msgstr ""
+
+#: gantt/scheduler/driver.py:65 gantt/scheduler/utils.py:76
+#, python-format
+msgid "Setting instance to %s state."
+msgstr ""
+
+#: gantt/scheduler/driver.py:138
+msgid "Driver must implement schedule_run_instance"
+msgstr ""
+
+#: gantt/scheduler/driver.py:147
+msgid "Driver must implement select_destinations"
+msgstr ""
+
+#: gantt/scheduler/driver.py:152
+msgid "Driver must implement select_hosts"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:79
+#, python-format
+msgid ""
+"Attempting to build %(num_instances)d instance(s) uuids: "
+"%(instance_uuids)s"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:83
+#, python-format
+msgid "Request Spec: %s"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:103
+#, python-format
+msgid "Choosing host %(weighed_host)s for instance %(instance_uuid)s"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:182
+msgid "Instance disappeared during scheduling"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:221
+msgid "Invalid value for 'scheduler_max_attempts', must be >= 1"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:238
+#, python-format
+msgid "Error from last host: %(last_host)s (node %(last_node)s): %(exc)s"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:272
+#, python-format
+msgid ""
+"Exceeded max scheduling attempts %(max_attempts)d for instance "
+"%(instance_uuid)s"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:340
+#, python-format
+msgid "Filtered %(hosts)s"
+msgstr ""
+
+#: gantt/scheduler/filter_scheduler.py:345
+#, python-format
+msgid "Weighed %(hosts)s"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:177
+#, python-format
+msgid "Metric name unknown of %r"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:371
+#, python-format
+msgid "Host filter ignoring hosts: %s"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:383
+#, python-format
+msgid "Host filter forcing available hosts to %s"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:386
+#, python-format
+msgid "No hosts matched due to not matching 'force_hosts' value of '%s'"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:399
+#, python-format
+msgid "Host filter forcing available nodes to %s"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:402
+#, python-format
+msgid "No nodes matched due to not matching 'force_nodes' value of '%s'"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:442
+#, python-format
+msgid "Ignoring %(service_name)s service update from %(host)s"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:448
+#, python-format
+msgid "Received %(service_name)s service update from %(state_key)s."
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:468
+#: gantt/scheduler/filters/trusted_filter.py:213
+#, python-format
+msgid "No service for compute ID %s"
+msgstr ""
+
+#: gantt/scheduler/host_manager.py:490
+#, python-format
+msgid "Removing dead compute node %(host)s:%(node)s from scheduler"
+msgstr ""
+
+#: gantt/scheduler/scheduler_options.py:72
+#, python-format
+msgid "Could not stat scheduler options file %(filename)s: '%(e)s'"
+msgstr ""
+
+#: gantt/scheduler/scheduler_options.py:81
+#, python-format
+msgid "Could not decode scheduler options: '%s'"
+msgstr ""
+
+#: gantt/scheduler/utils.py:58
+#, python-format
+msgid "Failed to %(service)s_%(method)s: %(ex)s"
+msgstr ""
+
+#: gantt/scheduler/filters/affinity_filter.py:110
+#, python-format
+msgid "Group anti affinity: check if %(host)s not in %(configured)s"
+msgstr ""
+
+#: gantt/scheduler/filters/affinity_filter.py:126
+#, python-format
+msgid "Group affinity: check if %(host)s in %(configured)s"
+msgstr ""
+
+#: gantt/scheduler/filters/aggregate_instance_extra_specs.py:60
+#, python-format
+msgid ""
+"%(host_state)s fails instance_type extra_specs requirements. Extra_spec "
+"%(key)s is not in aggregate."
+msgstr ""
+
+#: gantt/scheduler/filters/aggregate_instance_extra_specs.py:68
+#, python-format
+msgid ""
+"%(host_state)s fails instance_type extra_specs requirements. "
+"'%(aggregate_vals)s' do not match '%(req)s'"
+msgstr ""
+
+#: gantt/scheduler/filters/aggregate_multitenancy_isolation.py:49
+#, python-format
+msgid "%s fails tenant id on aggregate"
+msgstr ""
+
+#: gantt/scheduler/filters/compute_capabilities_filter.py:63
+#, python-format
+msgid "extra_spec requirement '%(req)s' does not match '%(cap)s'"
+msgstr ""
+
+#: gantt/scheduler/filters/compute_capabilities_filter.py:73
+#, python-format
+msgid "%(host_state)s fails instance_type extra_specs requirements"
+msgstr ""
+
+#: gantt/scheduler/filters/compute_filter.py:42
+#, python-format
+msgid "%(host_state)s is disabled, reason: %(reason)s"
+msgstr ""
+
+#: gantt/scheduler/filters/compute_filter.py:48
+#, python-format
+msgid "%(host_state)s has not been heard from in a  while"
+msgstr ""
+
+#: gantt/scheduler/filters/core_filter.py:52
+msgid "VCPUs not set; assuming CPU collection broken"
+msgstr ""
+
+#: gantt/scheduler/filters/core_filter.py:95
+#: gantt/scheduler/filters/ram_filter.py:96
+#, python-format
+msgid ""
+"%(num_values)d ratio values found, of which the minimum value will be "
+"used."
+msgstr ""
+
+#: gantt/scheduler/filters/core_filter.py:102
+#, python-format
+msgid "Could not decode cpu_allocation_ratio: '%s'"
+msgstr ""
+
+#: gantt/scheduler/filters/disk_filter.py:50
+#, python-format
+msgid ""
+"%(host_state)s does not have %(requested_disk)s MB usable disk, it only "
+"has %(usable_disk_mb)s MB usable disk."
+msgstr ""
+
+#: gantt/scheduler/filters/image_props_filter.py:57
+#, python-format
+msgid ""
+"Instance contains properties %(image_props)s, but no corresponding "
+"supported_instances are advertised by the compute node"
+msgstr ""
+
+#: gantt/scheduler/filters/image_props_filter.py:81
+#, python-format
+msgid ""
+"Instance properties %(image_props)s are satisfied by compute host "
+"hypervisor version %(hypervisor_version)s and supported instances "
+"%(supp_instances)s"
+msgstr ""
+
+#: gantt/scheduler/filters/image_props_filter.py:90
+#, python-format
+msgid ""
+"Instance contains properties %(image_props)s that are not provided by the"
+" compute node supported_instances %(supp_instances)s or hypervisor "
+"version %(hypervisor_version)s do not match"
+msgstr ""
+
+#: gantt/scheduler/filters/image_props_filter.py:110
+#, python-format
+msgid "%(host_state)s does not support requested instance_properties"
+msgstr ""
+
+#: gantt/scheduler/filters/io_ops_filter.py:44
+#, python-format
+msgid ""
+"%(host_state)s fails I/O ops check: Max IOs per host is set to "
+"%(max_io_ops)s"
+msgstr ""
+
+#: gantt/scheduler/filters/num_instances_filter.py:41
+#, python-format
+msgid ""
+"%(host_state)s fails num_instances check: Max instances per host is set "
+"to %(max_instances)s"
+msgstr ""
+
+#: gantt/scheduler/filters/ram_filter.py:57
+#, python-format
+msgid ""
+"%(host_state)s does not have %(requested_ram)s MB usable ram, it only has"
+" %(usable_ram)s MB usable ram."
+msgstr ""
+
+#: gantt/scheduler/filters/ram_filter.py:103
+#, python-format
+msgid "Could not decode ram_allocation_ratio: '%s'"
+msgstr ""
+
+#: gantt/scheduler/filters/retry_filter.py:43
+#, python-format
+msgid "Host %(host)s %(pass_msg)s.  Previously tried hosts: %(hosts)s"
+msgstr ""
+
+#: gantt/scheduler/weights/metrics.py:76
+#, python-format
+msgid "Ignoring the invalid elements of metrics_weight_setting: %s"
+msgstr ""
+
+#: gantt/servicegroup/api.py:61
+#, python-format
+msgid "ServiceGroup driver defined as an instance of %s"
+msgstr ""
+
+#: gantt/servicegroup/api.py:67
+#, python-format
+msgid "unknown ServiceGroup driver name: %s"
+msgstr ""
+
+#: gantt/servicegroup/api.py:84
+#, python-format
+msgid ""
+"Join new ServiceGroup member %(member_id)s to the %(group_id)s group, "
+"service = %(service)s"
+msgstr ""
+
+#: gantt/servicegroup/api.py:92
+#, python-format
+msgid "Check if the given member [%s] is part of the ServiceGroup, is up"
+msgstr ""
+
+#: gantt/servicegroup/api.py:101
+#, python-format
+msgid ""
+"Explicitly remove the given member %(member_id)s from the%(group_id)s "
+"group monitoring"
+msgstr ""
+
+#: gantt/servicegroup/api.py:108
+#, python-format
+msgid "Returns ALL members of the [%s] ServiceGroup"
+msgstr ""
+
+#: gantt/servicegroup/api.py:116
+#, python-format
+msgid "Returns one member of the [%s] group"
+msgstr ""
+
+#: gantt/servicegroup/drivers/db.py:43
+#, python-format
+msgid ""
+"DB_Driver: join new ServiceGroup member %(member_id)s to the %(group_id)s"
+" group, service = %(service)s"
+msgstr ""
+
+#: gantt/servicegroup/drivers/db.py:48
+msgid "service is a mandatory argument for DB based ServiceGroup driver"
+msgstr ""
+
+#: gantt/servicegroup/drivers/db.py:79
+#, python-format
+msgid "DB_Driver: get_all members of the %s group"
+msgstr ""
+
+#: gantt/servicegroup/drivers/db.py:102 gantt/servicegroup/drivers/mc.py:102
+msgid "Recovered model server connection!"
+msgstr ""
+
+#: gantt/servicegroup/drivers/db.py:108 gantt/servicegroup/drivers/mc.py:108
+msgid "model server went away"
+msgstr ""
+
+#: gantt/servicegroup/drivers/mc.py:45
+msgid "memcached_servers not defined"
+msgstr ""
+
+#: gantt/servicegroup/drivers/mc.py:53
+#, python-format
+msgid ""
+"Memcached_Driver: join new ServiceGroup member %(member_id)s to the "
+"%(group_id)s group, service = %(service)s"
+msgstr ""
+
+#: gantt/servicegroup/drivers/mc.py:59
+msgid "service is a mandatory argument for Memcached based ServiceGroup driver"
+msgstr ""
+
+#: gantt/servicegroup/drivers/mc.py:77
+#, python-format
+msgid "Memcached_Driver: get_all members of the %s group"
+msgstr ""
+
+#: gantt/servicegroup/drivers/zk.py:81
+#, python-format
+msgid ""
+"ZooKeeperDriver: join new member %(id)s to the %(gr)s group, "
+"service=%(sr)s"
+msgstr ""
+
+#: gantt/servicegroup/drivers/zk.py:91
+msgid ""
+"Unable to join. It is possible that either another node exists with the "
+"same name, or this node just restarted. We will try again in a short "
+"while to make sure."
+msgstr ""
+
+#: gantt/servicegroup/drivers/zk.py:102
+#, python-format
+msgid "ZooKeeperDriver.leave: %(member)s from group %(group)s"
+msgstr ""
+
+#: gantt/servicegroup/drivers/zk.py:110
+#, python-format
+msgid "ZooKeeperDriver.leave: %(id)s has not joined to the %(gr)s group"
+msgstr ""
+
