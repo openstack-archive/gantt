@@ -35,7 +35,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.pngmath',
               'sphinx.ext.ifconfig',
               'sphinx.ext.graphviz',
-              'oslo.sphinx',
+              'oslosphinx',
               ]
 
 todo_include_todos = True
