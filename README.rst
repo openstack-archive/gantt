@@ -1,8 +1,23 @@
 OpenStack Gantt README
-=====================
+======================
 
 Gantt provides a common scheduler framework for use by various
 OpenStack components.
+
+------------------
+
+**********
+DISCLAIMER
+**********
+
+At the moment, the Gantt repository is a proof a concept for testing Nova
+scheduler split.
+The content of this Git repository will be fully resynchronized with Nova
+scheduler code once the Nova scheduler forklift efforts are done.
+
+http://lists.openstack.org/pipermail/openstack-infra/2014-March/001109.html
+
+------------------
 
 OpenStack Gantt is distributed under the terms of the Apache
 License, Version 2.0. The full terms and conditions of this
