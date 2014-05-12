@@ -439,15 +439,15 @@ class HostManager(object):
         """Update the per-service capabilities based on this notification."""
 
         if service_name != 'compute':
-            LOG.debug(_('Ignoring %(service_name)s service update '
-                        'from %(host)s'), {'service_name': service_name,
-                                           'host': host})
+            LOG.debug('Ignoring %(service_name)s service update '
+                      'from %(host)s', {'service_name': service_name,
+                                         'host': host})
             return
 
         state_key = (host, capabilities.get('hypervisor_hostname'))
-        LOG.debug(_("Received %(service_name)s service update from "
-                    "%(state_key)s."), {'service_name': service_name,
-                                        'state_key': state_key})
+        LOG.debug("Received %(service_name)s service update from "
+                  "%(state_key)s.", {'service_name': service_name,
+                                      'state_key': state_key})
         # Copy the capabilities, so we don't modify the original dict
         capab_copy = dict(capabilities)
         capab_copy["timestamp"] = timeutils.utcnow()  # Reported time
