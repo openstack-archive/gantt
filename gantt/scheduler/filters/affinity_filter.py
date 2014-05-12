@@ -107,9 +107,9 @@ class GroupAntiAffinityFilter(AffinityFilter):
 
     def host_passes(self, host_state, filter_properties):
         group_hosts = filter_properties.get('group_hosts') or []
-        LOG.debug(_("Group anti affinity: check if %(host)s not "
-                    "in %(configured)s"), {'host': host_state.host,
-                                           'configured': group_hosts})
+        LOG.debug("Group anti affinity: check if %(host)s not "
+                  "in %(configured)s", {'host': host_state.host,
+                                         'configured': group_hosts})
         if group_hosts:
             return not host_state.host in group_hosts
 
@@ -123,9 +123,9 @@ class GroupAffinityFilter(AffinityFilter):
 
     def host_passes(self, host_state, filter_properties):
         group_hosts = filter_properties.get('group_hosts', [])
-        LOG.debug(_("Group affinity: check if %(host)s in "
-                    "%(configured)s"), {'host': host_state.host,
-                                        'configured': group_hosts})
+        LOG.debug("Group affinity: check if %(host)s in "
+                  "%(configured)s", {'host': host_state.host,
+                                      'configured': group_hosts})
         if group_hosts:
             return host_state.host in group_hosts
 

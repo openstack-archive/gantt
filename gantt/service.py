@@ -168,7 +168,7 @@ class Service(service.Service):
             self.manager.backdoor_port = self.backdoor_port
 
         self.conn = rpc.create_connection(new=True)
-        LOG.debug(_("Creating Consumer connection for Service %s") %
+        LOG.debug("Creating Consumer connection for Service %s" %
                   self.topic)
 
         rpc_dispatcher = self.manager.create_rpc_dispatcher(self.backdoor_port)
@@ -186,7 +186,7 @@ class Service(service.Service):
 
         self.manager.post_start_hook()
 
-        LOG.debug(_("Join ServiceGroup membership for this service %s")
+        LOG.debug("Join ServiceGroup membership for this service %s"
                   % self.topic)
         # Add service to the ServiceGroup membership group.
         self.servicegroup_api.join(self.host, self.topic, self)

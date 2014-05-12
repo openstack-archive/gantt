@@ -38,8 +38,8 @@ class NumInstancesFilter(filters.BaseHostFilter):
         max_instances = CONF.max_instances_per_host
         passes = num_instances < max_instances
         if not passes:
-            LOG.debug(_("%(host_state)s fails num_instances check: Max "
-                        "instances per host is set to %(max_instances)s"),
-                        {'host_state': host_state,
-                         'max_instances': max_instances})
+            LOG.debug("%(host_state)s fails num_instances check: Max "
+                      "instances per host is set to %(max_instances)s",
+                      {'host_state': host_state,
+                       'max_instances': max_instances})
         return passes
