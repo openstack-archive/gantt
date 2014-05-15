@@ -15,7 +15,7 @@
 """
 Tests For Scheduler Utils
 """
-import mox
+from mox3 import mox
 from oslo.config import cfg
 
 from nova.compute import flavors
