@@ -18,7 +18,7 @@ Tests For Scheduler Host Filters.
 import httplib
 
 from oslo.config import cfg
-import stubout
+from mox3 import stubout
 
 from nova import context
 from nova import db
