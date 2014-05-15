@@ -16,7 +16,7 @@
 Fakes For Scheduler tests.
 """
 
-import mox
+from mox3 import mox
 
 from nova.compute import vm_states
 from nova import db
