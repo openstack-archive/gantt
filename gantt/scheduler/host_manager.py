@@ -369,7 +369,7 @@ class HostManager(object):
                         ignored_hosts.append(host)
             ignored_hosts_str = ', '.join(ignored_hosts)
             msg = _('Host filter ignoring hosts: %s')
-            LOG.audit(msg % ignored_hosts_str)
+            LOG.info(msg % ignored_hosts_str)
 
         def _match_forced_hosts(host_map, hosts_to_force):
             forced_hosts = []
@@ -385,7 +385,7 @@ class HostManager(object):
                 forced_hosts_str = ', '.join(hosts_to_force)
                 msg = _("No hosts matched due to not matching "
                         "'force_hosts' value of '%s'")
-            LOG.audit(msg % forced_hosts_str)
+            LOG.info(msg % forced_hosts_str)
 
         def _match_forced_nodes(host_map, nodes_to_force):
             forced_nodes = []
@@ -401,7 +401,7 @@ class HostManager(object):
                 forced_nodes_str = ', '.join(nodes_to_force)
                 msg = _("No nodes matched due to not matching "
                         "'force_nodes' value of '%s'")
-            LOG.audit(msg % forced_nodes_str)
+            LOG.info(msg % forced_nodes_str)
 
         filter_classes = self._choose_host_filters(filter_class_names)
         ignore_hosts = filter_properties.get('ignore_hosts', [])

@@ -149,8 +149,8 @@ class Service(service.Service):
 
     def start(self):
         verstr = version.version_string_with_package()
-        LOG.audit(_('Starting %(topic)s node (version %(version)s)'),
-                  {'topic': self.topic, 'version': verstr})
+        LOG.info(_('Starting %(topic)s node (version %(version)s)'),
+                 {'topic': self.topic, 'version': verstr})
         self.basic_config_check()
         self.manager.init_host()
         self.model_disconnected = False
