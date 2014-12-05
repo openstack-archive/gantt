@@ -93,7 +93,7 @@ or Mac OS X 10.7 (OpenSSL 0.9.8r) works fine with nova.
 
 Getting the code
 ----------------
-Grab the code from GitHub::
+Grab the code::
 
     git clone https://github.com/openstack/nova.git
     cd nova
@@ -150,5 +150,5 @@ Refer to HowToContribute_ for information.
 Nova uses the Gerrit code review system. For information on how to submit
 your branch to Gerrit, see GerritWorkflow_.
 
-.. _GerritWorkflow: http://wiki.openstack.org/GerritWorkflow
-.. _HowToContribute: http://wiki.openstack.org/HowToContribute
+.. _GerritWorkflow: http://docs.openstack.org/infra/manual/developers.html#development-workflow
+.. _HowToContribute: http://docs.openstack.org/infra/manual/developers.html
